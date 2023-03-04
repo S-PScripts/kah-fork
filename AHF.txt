@@ -1,0 +1,97 @@
+-- AHF = Admin House Fucker
+-- Made by Damix2131
+-- https://www.roblox.com/users/708608823/profile
+-- Have fun! >:)
+game:GetService'Players':Chat(("char all 000000000000000000000000708608823"))
+game:GetService'Players':Chat(("reset all"))
+game:GetService'Players':Chat(("blind others"))
+game:GetService'Players':Chat(("ff all"))
+game:GetService'Players':Chat(("speed others EXPLOITERS GONNA HATE :flushed:"))
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Invite: gg/HJwuBkN5KM","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("---------------------","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Invite: gg/HJwuBkN5KM","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Why u should join DIY Scripts?","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("1. We own largest Kohls Admin House NBC/BC Script Collection","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("3. A Lot Bots","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("4. A Lot Kohls Admin House Crashers Joined Us for Fact That (read 1)","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Invite: gg/HJwuBkN5KM","All")
+wait(0.2)
+game:GetService'Players':Chat(("jump others"))
+game:GetService'Players':Chat(("music 000000000000000000000000000006774593526"))
+wait(0.3)
+game:GetService'Players':Chat(("size all 0.3"))
+game:GetService'Players':Chat(("size all 0.3"))
+game:GetService'Players':Chat(("size all 0.3"))
+game:GetService'Players':Chat(("freeze all"))
+game:GetService'Players':Chat(("size all 10"))
+game:GetService'Players':Chat(("size all 10"))
+game:GetService'Players':Chat(("size all 10"))
+game:GetService'Players':Chat(("clone all"))
+game:GetService'Players':Chat(("size all 0.3"))
+game:GetService'Players':Chat(("size all 0.3"))
+game:GetService'Players':Chat(("size all 0.3"))
+game:GetService'Players':Chat(("freeze all"))
+game:GetService'Players':Chat(("size all 10"))
+game:GetService'Players':Chat(("size all 10"))
+game:GetService'Players':Chat(("size all 10"))
+game:GetService'Players':Chat(("clone all"))
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   		end
+	end
+end
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   	end
+end
+
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   	end
+end
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   	end
+end
+
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   	end
+end
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   	end
+end
+
+wait(0.1)
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   	end
+end
