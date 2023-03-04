@@ -3,13 +3,15 @@
 
 // todo list:
 
-> understand tables
 > skid more code
+> add more stuff to afk
+> add anwsers to questions like "can i have admin"
+> complain about life as always :trollface:
 
 ]]
 
 repeat wait() until game:IsLoaded() 
-
+local time = 0
 fireclickdetector = fireclickdetector or click_detector
 local ping = coroutine.wrap(function() ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() end)()
 
@@ -19,6 +21,17 @@ local prefix = "+"
 
 local bangears = {}
 local blacklisted = {}
+
+
+coroutine.wrap(function()
+    while task.wait(time) do
+      for _, v in ipairs(Players:GetPlayer()) do
+        if table.find(blacklisted, v.Name) then
+          c('shield/'..v.Name..'/'..v.Name..'/'..v.Name)
+      end
+    end
+  end
+end)
 
 local function equiptools()
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
@@ -31,7 +44,6 @@ end
 local afk = false
 local autoanwser = false
 
-local time = 0
 local WS = game:GetService("Workspace")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
@@ -71,14 +83,16 @@ Players.LocalPlayer.Chatted:Connect(function(msg)
     end
 end)
 
-spawn(function()
-    while true do task.wait(time)
         local function chat(m) game.Players:Chat(m) end
         local StarterGui = game:GetService("StarterGui")
+            coroutine.wrap(function()
+                while task.wait(time) do
             if game.Players.LocalPlayer.Character:FindFirstChild('DisableBackpack') then
                 chat("reset me")
                 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+              end
             end
+            while task.wait(time) do
             for i, player in pairs(game:GetService("Players"):GetPlayers()) do
                 if player.Character then
                     if player.Character:FindFirstChild("HumanoidRootPart") and not player.Localplayer.Character:FindFirstChild("HumanoidRootPart") then
@@ -88,12 +102,8 @@ spawn(function()
                     chat('unsize ' ..Name)
                     chat('pm/ '..Name..' Sorry but changing size is disabled in this server. Please check other server!')
                     end
-                    game:GetService("Players").LocalPlayer.Character:WaitForChild("Torso").ChildAdded:Connect(function(fling)
-                        local oldpos = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
-                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
-                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos
-                        game:GetService("Players").LocalPlayer.Character.Humanoid.Sit = false
-                    end)
+                end
+             end
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
                     if autoanwser == true then
                         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w "..Name.." "..Message, "All")
@@ -102,13 +112,11 @@ spawn(function()
                         local oldpos = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
                         if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame ~= oldpos then
                             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos
-                        end 
                     end
                 end
             end
         end
-     end
-end)
+     end)
 
 game.Players.PlayerAdded:Connect(function(plr)
     game.Players:Chat("h/ \n \n \n Welcome "..plr.DisplayName.." To Hell! (DMX) \n \n \n")
