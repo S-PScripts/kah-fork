@@ -1,3 +1,13 @@
+
+--[[
+
+// todo list:
+
+> understand tables
+> skid more code
+
+]]
+
 repeat wait() until game:IsLoaded() 
 
 fireclickdetector = fireclickdetector or click_detector
