@@ -92,10 +92,12 @@ end)
                 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
               end
             end
+          end)()
+            coroutine.wrap(function()
             while task.wait(time) do
             for i, player in pairs(game:GetService("Players"):GetPlayers()) do
                 if player.Character then
-                    if player.Character:FindFirstChild("HumanoidRootPart") and not player.Localplayer.Character:FindFirstChild("HumanoidRootPart") then
+                    if player.Character:FindFirstChild("HumanoidRootPart") and not player.Character:FindFirstChild("HumanoidRootPart") then
                         local size = player.Character.HumanoidRootPart.Size
                     if size ~= Vector3.new(2, 2, 1) then
                         local Name = player.Name
@@ -103,11 +105,20 @@ end)
                     chat('pm/ '..Name..' Sorry but changing size is disabled in this server. Please check other server!')
                     end
                 end
-             end
+               end
+            end
+        end
+    end)()
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+coroutine.wrap(function()
+    while task.wait(time) do
                     if autoanwser == true then
-                        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w "..Name.." "..Message, "All")
+                   --     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w "..Name.." "..Message, "All")
                     end
+                end
+                end)()
+                coroutine.wrap(function()
+                    while task.wait(time) do
                     if afk == true then
                         local oldpos = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
                         if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame ~= oldpos then
@@ -115,12 +126,11 @@ end)
                     end
                 end
             end
-        end
-     end)()
-
+        end)()
+        
 game.Players.PlayerAdded:Connect(function(plr)
     game.Players:Chat("h/ \n \n \n Welcome "..plr.DisplayName.." To Hell! (DMX) \n \n \n")
-    for i, v in pairs(game.Workspace:GetChildren()) do
+    for _, v in ipairs(Players:GetPlayer()) do
         if table.find(gearban, plr) then
         game.Players:Chat(prefix.. "gearban " ..plr)
         game.Players:Chat("pm/"..plr.." Rejoin Won't Help You With Ungearban!")
