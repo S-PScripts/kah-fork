@@ -22,7 +22,7 @@ function say(i) game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageReq
 local prefix = "+"
 
 local gearbanned = {}
-local blacklisted = {"efhbuyfqebukqrgbj", "gklow1"}
+local blacklisted = {"efhbuyfqebukqrgbj", "gklow1", "CoolAnimalLover6"}
 
 local function equiptools()
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
@@ -53,7 +53,7 @@ Players.LocalPlayer.Chatted:Connect(function(msg)
     local acs = string.rep(" ", math.random(20, 500)) -- anti ban for normal commands
     if string.sub(msg, 1, #prefix+7) == prefix..'gearban' then
         local plr = fp(t)
-        table.insert(bangears, plr.Name)
+        table.insert(gearbanned, plr.Name)
         c("gear me "..ags.."82357101")
         repeat task.wait(time) until LocalPlayer.Backpack:FindFirstChild('PortableJustice')
         LocalPlayer.Backpack.PortableJustice.Parent = LocalPlayer.Character
