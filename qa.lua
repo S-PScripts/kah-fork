@@ -49,10 +49,10 @@ end
 Players.LocalPlayer.Chatted:Connect(function(msg)
     local sp = msg:split(" ")
     local t = sp[2]
-    local plr = fp(t)
     local ags = string.rep(0, math.random(20, 500)) -- anti ban for spamming gear command
     local acs = string.rep(" ", math.random(20, 500)) -- anti ban for normal commands
     if string.sub(msg, 1, #prefix+7) == prefix..'gearban' then
+        local plr = fp(t)
         table.insert(bangears, plr.Name)
         c("gear me "..ags.."82357101")
         repeat task.wait(time) until LocalPlayer.Backpack:FindFirstChild('PortableJustice')
