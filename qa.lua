@@ -116,7 +116,7 @@ end)
                 end
             end
         end
-     end)
+     end)()
 
 game.Players.PlayerAdded:Connect(function(plr)
     game.Players:Chat("h/ \n \n \n Welcome "..plr.DisplayName.." To Hell! (DMX) \n \n \n")
