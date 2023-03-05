@@ -10,6 +10,8 @@
 
 ]]
 
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
 repeat wait() until game:IsLoaded() 
 local time = 0
 fireclickdetector = fireclickdetector or click_detector
@@ -19,19 +21,8 @@ local function c(m) game.Players:Chat(m) end
 function say(i) game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(i, "ALL") end
 local prefix = "+"
 
-local bangears = {}
-local blacklisted = {}
-
-
-coroutine.wrap(function()
-    while task.wait(time) do
-      for _, v in ipairs(Players:GetPlayer()) do
-        if table.find(blacklisted, v.Name) then
-          c('shield/'..v.Name..'/'..v.Name..'/'..v.Name)
-      end
-    end
-  end
-end)
+local gearbanned = {}
+local blacklisted = {"efhbuyfqebukqrgbj", "gklow1"}
 
 local function equiptools()
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
@@ -45,8 +36,7 @@ local afk = false
 local autoanwser = false
 
 local WS = game:GetService("Workspace")
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
+
 local UserInputService = game:GetService("UserInputService")
 local function fp(Player)
     for _, v in pairs(game.Players:GetPlayers()) do
@@ -63,7 +53,7 @@ Players.LocalPlayer.Chatted:Connect(function(msg)
     local ags = string.rep(0, math.random(20, 500)) -- anti ban for spamming gear command
     local acs = string.rep(" ", math.random(20, 500)) -- anti ban for normal commands
     if string.sub(msg, 1, #prefix+7) == prefix..'gearban' then
-        table.insert(bangears, plr)
+        table.insert(bangears, plr.Name)
         c("gear me "..ags.."82357101")
         repeat task.wait(time) until LocalPlayer.Backpack:FindFirstChild('PortableJustice')
         LocalPlayer.Backpack.PortableJustice.Parent = LocalPlayer.Character
@@ -83,7 +73,28 @@ Players.LocalPlayer.Chatted:Connect(function(msg)
     end
 end)
 
-        local function chat(m) game.Players:Chat(m) end
+coroutine.wrap(function()
+    while task.wait(time) do
+      for _, v in ipairs(Players:GetPlayers()) do
+        if table.find(blacklisted, v.Name) then
+          c('shield/'..v.Name..'/'..v.Name..'/'..v.Name)
+      end
+    end
+  end
+end)
+
+coroutine.wrap(function()
+    while task.wait(time) do
+      for _, v in ipairs(Players:GetPlayers()) do
+        if table.find(gearbanned, v.Name) then
+          c(prefix.. 'gearban ' ..v.Name)
+      end
+    end
+  end
+end)
+
+
+local function chat(m) game.Players:Chat(m) end
         local StarterGui = game:GetService("StarterGui")
             coroutine.wrap(function()
                 while task.wait(time) do
@@ -130,10 +141,4 @@ coroutine.wrap(function()
         
 game.Players.PlayerAdded:Connect(function(plr)
     game.Players:Chat("h/ \n \n \n Welcome "..plr.DisplayName.." To Hell! (DMX) \n \n \n")
-    for _, v in ipairs(Players:GetPlayer()) do
-        if table.find(gearban, plr) then
-        game.Players:Chat(prefix.. "gearban " ..plr)
-        game.Players:Chat("pm/"..plr.." Rejoin Won't Help You With Ungearban!")
-        end
-    end
 end)
