@@ -84,20 +84,17 @@ coroutine.wrap(function()
 end)
 
 coroutine.wrap(function()
-    while task.wait(time) do
       for _, v in ipairs(Players:GetPlayers()) do
         if table.find(gearbanned, v.Name) then
           c(prefix.. 'gearban ' ..v.Name)
-      end
     end
   end
 end)
 
-
-local function chat(m) game.Players:Chat(m) end
-        local StarterGui = game:GetService("StarterGui")
             coroutine.wrap(function()
                 while task.wait(time) do
+            local StarterGui = game:GetService("StarterGui")
+            local function chat(m) game.Players:Chat(m) end
             if game.Players.LocalPlayer.Character:FindFirstChild('DisableBackpack') then
                 chat("reset me")
                 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
@@ -106,6 +103,7 @@ local function chat(m) game.Players:Chat(m) end
           end)()
             coroutine.wrap(function()
             while task.wait(time) do
+            local function chat(m) game.Players:Chat(m) end
             for i, player in pairs(game:GetService("Players"):GetPlayers()) do
                 if player.Character then
                     if player.Character:FindFirstChild("HumanoidRootPart") and not player.Character:FindFirstChild("HumanoidRootPart") then
