@@ -1,0 +1,37 @@
+-- Sick script by kohls
+
+local Player = game.Players.LocalPlayer
+local Char = Player.Character
+local pads = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:GetChildren("Head")
+local gameFlr = game:GetService("Workspace").Terrain["_Game"]
+local Char = game.Players.LocalPlayer.Character
+if gameFlr.Admin:FindFirstChild("Regen") then
+	function TsprF(c) fireclickdetector(gameFlr.Admin.Regen.ClickDetector, c) end
+	TsprF(1)
+	TsprF(0)
+end
+for i,v in pairs(game:GetService("Workspace").Terrain["_Game"].Admin.Pads:GetChildren("Head")) do
+	firetouchinterest(Char["Left Leg"], v.Head, 0)
+	firetouchinterest(Char["Left Leg"], v.Head, 1)
+	wait()
+end
+game.Players:Chat("gear me 18474459")
+Player.Backpack:WaitForChild("PaintBucket")
+pcall(function()
+	Char.Humanoid:EquipTool(Player.Backpack.PaintBucket)
+end)
+while true do
+	local color = Color3.fromRGB(math.random(0,255), math.random(0,255), math.random(0,255))
+	for _,I in pairs(game.Workspace:GetDescendants()) do
+		spawn(function()
+			local IsPart = pcall(function()
+				if I.Color then
+				end
+			end)
+			if IsPart then
+				Char.PaintBucket:WaitForChild("Remotes"):WaitForChild("ServerControls"):InvokeServer("PaintPart", {Part = I, Color = color})
+			end
+		end)
+	end
+   wait()
+end

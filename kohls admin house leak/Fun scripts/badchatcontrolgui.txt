@@ -1,0 +1,512 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local GUI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local Openh = Instance.new("TextButton")
+local Openm = Instance.new("TextButton")
+local OpenCloseButton = Instance.new("TextButton")
+local m = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local Close_2 = Instance.new("TextButton")
+local Title_2 = Instance.new("TextLabel")
+local Chat = Instance.new("TextButton")
+local Msg = Instance.new("TextBox")
+local User = Instance.new("TextBox")
+local mm = Instance.new("TextLabel")
+local h = Instance.new("Frame")
+local Label_2 = Instance.new("TextLabel")
+local Close_3 = Instance.new("TextButton")
+local Title_3 = Instance.new("TextLabel")
+local Chat_2 = Instance.new("TextButton")
+local Msg_2 = Instance.new("TextBox")
+local User_2 = Instance.new("TextBox")
+local hm = Instance.new("TextLabel")
+local Destroy = Instance.new("TextButton")
+
+--Properties:
+
+GUI.Name = "GUI"
+GUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+GUI.ResetOnSpawn = false
+
+Frame.Parent = GUI
+Frame.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.386181831, 0, 0.219941348, 0)
+Frame.Size = UDim2.new(0, 312, 0, 381)
+Frame.Visible = false
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Close.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Close.BorderSizePixel = 2
+Close.Position = UDim2.new(0.868589759, 0, 0, 0)
+Close.Size = UDim2.new(0, 41, 0, 41)
+Close.Font = Enum.Font.SciFi
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Title.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Title.BorderSizePixel = 2
+Title.Size = UDim2.new(0, 270, 0, 41)
+Title.Font = Enum.Font.SciFi
+Title.Text = "Kohl's Admin House Chat GUI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Openh.Name = "Openh"
+Openh.Parent = Frame
+Openh.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Openh.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Openh.BorderSizePixel = 2
+Openh.Position = UDim2.new(0.141025648, 0, 0.217847779, 0)
+Openh.Size = UDim2.new(0, 223, 0, 76)
+Openh.Font = Enum.Font.SciFi
+Openh.Text = "Open for h message chat GUI"
+Openh.TextColor3 = Color3.fromRGB(255, 255, 255)
+Openh.TextScaled = true
+Openh.TextSize = 14.000
+Openh.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Openh.TextWrapped = true
+
+Openm.Name = "Openm"
+Openm.Parent = Frame
+Openm.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Openm.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Openm.BorderSizePixel = 2
+Openm.Position = UDim2.new(0.141025648, 0, 0.530183733, 0)
+Openm.Size = UDim2.new(0, 223, 0, 76)
+Openm.Font = Enum.Font.SciFi
+Openm.Text = "Open for m/ message chat GUI (Person299's Admin required)"
+Openm.TextColor3 = Color3.fromRGB(255, 255, 255)
+Openm.TextScaled = true
+Openm.TextSize = 14.000
+Openm.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Openm.TextWrapped = true
+
+OpenCloseButton.Name = "OpenCloseButton"
+OpenCloseButton.Parent = GUI
+OpenCloseButton.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+OpenCloseButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+OpenCloseButton.BorderSizePixel = 2
+OpenCloseButton.Position = UDim2.new(0, 0, 0.482404679, 0)
+OpenCloseButton.Size = UDim2.new(0, 103, 0, 24)
+OpenCloseButton.Font = Enum.Font.SciFi
+OpenCloseButton.Text = "Open"
+OpenCloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenCloseButton.TextScaled = true
+OpenCloseButton.TextSize = 14.000
+OpenCloseButton.TextWrapped = true
+
+m.Name = "m"
+m.Parent = GUI
+m.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+m.BorderColor3 = Color3.fromRGB(255, 255, 255)
+m.BorderSizePixel = 2
+m.Position = UDim2.new(0.386293709, 0, 0.219410256, 0)
+m.Size = UDim2.new(0, 312, 0, 381)
+m.Visible = false
+
+Label.Name = "Label"
+Label.Parent = m
+Label.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Label.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Label.BorderSizePixel = 2
+Label.Position = UDim2.new(0, 0, 0.112860896, 0)
+Label.Size = UDim2.new(0, 312, 0, 338)
+Label.Font = Enum.Font.SourceSans
+Label.Text = ""
+Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Label.TextSize = 14.000
+
+Close_2.Name = "Close"
+Close_2.Parent = m
+Close_2.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Close_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Close_2.BorderSizePixel = 2
+Close_2.Position = UDim2.new(0.868589759, 0, 0, 0)
+Close_2.Size = UDim2.new(0, 41, 0, 41)
+Close_2.Font = Enum.Font.SciFi
+Close_2.Text = "X"
+Close_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close_2.TextScaled = true
+Close_2.TextSize = 14.000
+Close_2.TextWrapped = true
+
+Title_2.Name = "Title"
+Title_2.Parent = m
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Size = UDim2.new(0, 270, 0, 41)
+Title_2.Font = Enum.Font.SciFi
+Title_2.Text = "Kohl's Admin House Chat GUI"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+Chat.Name = "Chat"
+Chat.Parent = m
+Chat.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Chat.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Chat.BorderSizePixel = 2
+Chat.Position = UDim2.new(0.179487184, 0, 0.732283473, 0)
+Chat.Size = UDim2.new(0, 200, 0, 50)
+Chat.Font = Enum.Font.SciFi
+Chat.Text = "Chat"
+Chat.TextColor3 = Color3.fromRGB(255, 255, 255)
+Chat.TextScaled = true
+Chat.TextSize = 14.000
+Chat.TextWrapped = true
+
+Msg.Name = "Msg"
+Msg.Parent = m
+Msg.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Msg.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Msg.BorderSizePixel = 2
+Msg.Position = UDim2.new(0.179487184, 0, 0.490813643, 0)
+Msg.Size = UDim2.new(0, 200, 0, 50)
+Msg.Font = Enum.Font.SciFi
+Msg.PlaceholderText = "Message"
+Msg.Text = ""
+Msg.TextColor3 = Color3.fromRGB(255, 255, 255)
+Msg.TextScaled = true
+Msg.TextSize = 30.000
+Msg.TextWrapped = true
+
+User.Name = "User"
+User.Parent = m
+User.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+User.BorderColor3 = Color3.fromRGB(255, 255, 255)
+User.BorderSizePixel = 2
+User.Position = UDim2.new(0.179487184, 0, 0.2414698, 0)
+User.Size = UDim2.new(0, 200, 0, 50)
+User.Font = Enum.Font.SciFi
+User.PlaceholderText = "Username"
+User.Text = ""
+User.TextColor3 = Color3.fromRGB(255, 255, 255)
+User.TextScaled = true
+User.TextSize = 30.000
+User.TextWrapped = true
+
+mm.Name = "mm"
+mm.Parent = m
+mm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mm.BackgroundTransparency = 1.000
+mm.Position = UDim2.new(0.00320512825, 0, 0.112860896, 0)
+mm.Size = UDim2.new(0, 311, 0, 41)
+mm.Font = Enum.Font.SciFi
+mm.Text = "m/ Message"
+mm.TextColor3 = Color3.fromRGB(255, 255, 255)
+mm.TextScaled = true
+mm.TextSize = 14.000
+mm.TextWrapped = true
+
+h.Name = "h"
+h.Parent = GUI
+h.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+h.BorderColor3 = Color3.fromRGB(255, 255, 255)
+h.BorderSizePixel = 2
+h.Position = UDim2.new(0.386293709, 0, 0.219410256, 0)
+h.Size = UDim2.new(0, 312, 0, 381)
+h.Visible = false
+
+Label_2.Name = "Label"
+Label_2.Parent = h
+Label_2.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Label_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Label_2.BorderSizePixel = 2
+Label_2.Position = UDim2.new(0, 0, 0.112860896, 0)
+Label_2.Size = UDim2.new(0, 312, 0, 338)
+Label_2.Font = Enum.Font.SourceSans
+Label_2.Text = ""
+Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Label_2.TextSize = 14.000
+
+Close_3.Name = "Close"
+Close_3.Parent = h
+Close_3.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Close_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Close_3.BorderSizePixel = 2
+Close_3.Position = UDim2.new(0.868589759, 0, 0, 0)
+Close_3.Size = UDim2.new(0, 41, 0, 41)
+Close_3.Font = Enum.Font.SciFi
+Close_3.Text = "X"
+Close_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close_3.TextScaled = true
+Close_3.TextSize = 14.000
+Close_3.TextWrapped = true
+
+Title_3.Name = "Title"
+Title_3.Parent = h
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Size = UDim2.new(0, 270, 0, 41)
+Title_3.Font = Enum.Font.SciFi
+Title_3.Text = "Kohl's Admin House Chat GUI"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+Chat_2.Name = "Chat"
+Chat_2.Parent = h
+Chat_2.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Chat_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Chat_2.BorderSizePixel = 2
+Chat_2.Position = UDim2.new(0.179487184, 0, 0.732283473, 0)
+Chat_2.Size = UDim2.new(0, 200, 0, 50)
+Chat_2.Font = Enum.Font.SciFi
+Chat_2.Text = "Chat"
+Chat_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Chat_2.TextScaled = true
+Chat_2.TextSize = 14.000
+Chat_2.TextWrapped = true
+
+Msg_2.Name = "Msg"
+Msg_2.Parent = h
+Msg_2.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Msg_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Msg_2.BorderSizePixel = 2
+Msg_2.Position = UDim2.new(0.179487184, 0, 0.490813643, 0)
+Msg_2.Size = UDim2.new(0, 200, 0, 50)
+Msg_2.Font = Enum.Font.SciFi
+Msg_2.PlaceholderText = "Message"
+Msg_2.Text = ""
+Msg_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Msg_2.TextScaled = true
+Msg_2.TextSize = 30.000
+Msg_2.TextWrapped = true
+
+User_2.Name = "User"
+User_2.Parent = h
+User_2.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+User_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+User_2.BorderSizePixel = 2
+User_2.Position = UDim2.new(0.179487184, 0, 0.2414698, 0)
+User_2.Size = UDim2.new(0, 200, 0, 50)
+User_2.Font = Enum.Font.SciFi
+User_2.PlaceholderText = "Username"
+User_2.Text = ""
+User_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+User_2.TextScaled = true
+User_2.TextSize = 30.000
+User_2.TextWrapped = true
+
+hm.Name = "hm"
+hm.Parent = h
+hm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hm.BackgroundTransparency = 1.000
+hm.Position = UDim2.new(0.00320512825, 0, 0.112860896, 0)
+hm.Size = UDim2.new(0, 311, 0, 41)
+hm.Font = Enum.Font.SciFi
+hm.Text = "h Message"
+hm.TextColor3 = Color3.fromRGB(255, 255, 255)
+hm.TextScaled = true
+hm.TextSize = 14.000
+hm.TextWrapped = true
+
+Destroy.Name = "Destroy"
+Destroy.Parent = GUI
+Destroy.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Destroy.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Destroy.BorderSizePixel = 2
+Destroy.Position = UDim2.new(0, 0, 0.964809358, 0)
+Destroy.Size = UDim2.new(0, 103, 0, 24)
+Destroy.Font = Enum.Font.SciFi
+Destroy.Text = "Destroy GUI"
+Destroy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Destroy.TextScaled = true
+Destroy.TextSize = 14.000
+Destroy.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Destroy.TextWrapped = true
+
+-- Scripts:
+
+local function BDOP_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	local Frame = script.Parent.Parent
+	script.Parent.MouseButton1Click:Connect(function()
+		if Frame.Visible == true then
+			Frame.Visible = false
+			script.Parent.Parent.Parent.OpenCloseButton.Text = "Open"
+		end
+	end)
+end
+coroutine.wrap(BDOP_fake_script)()
+local function BQAS_fake_script() -- Openh.LocalScript 
+	local script = Instance.new('LocalScript', Openh)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.h.Visible = true
+		script.Parent.Parent.Visible = false
+		
+	end)
+end
+coroutine.wrap(BQAS_fake_script)()
+local function IGZZL_fake_script() -- Openm.LocalScript 
+	local script = Instance.new('LocalScript', Openm)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.m.Visible = true
+		script.Parent.Parent.Visible = false
+		
+	end)
+end
+coroutine.wrap(IGZZL_fake_script)()
+local function NDWO_fake_script() -- Frame.Dragable 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(NDWO_fake_script)()
+local function IDEHCIT_fake_script() -- OpenCloseButton.LocalScript 
+	local script = Instance.new('LocalScript', OpenCloseButton)
+
+	local Frame = script.Parent.Parent.Frame
+	local h = script.Parent.Parent.h
+	local m = script.Parent.Parent.m
+	script.Parent.MouseButton1Click:Connect(function()
+		if Frame.Visible == true then
+			Frame.Visible = false
+			h.Visible = false
+			m.Visible = false
+			script.Parent.Text = "Open"
+		else
+			Frame.Visible = true
+			script.Parent.Text = "Close"
+		end
+	end)
+end
+coroutine.wrap(IDEHCIT_fake_script)()
+local function ZBVGMOO_fake_script() -- Close_2.LocalScript 
+	local script = Instance.new('LocalScript', Close_2)
+
+	local Frame = script.Parent.Parent
+	script.Parent.MouseButton1Click:Connect(function()
+		if Frame.Visible == true then
+			Frame.Visible = false
+			script.Parent.Parent.Parent.Frame.Visible = true
+		end
+	end)
+end
+coroutine.wrap(ZBVGMOO_fake_script)()
+local function YBSCZ_fake_script() -- Chat.Script 
+	local script = Instance.new('Script', Chat)
+
+	local User = script.Parent.Parent.User
+	local Msg = script.Parent.Parent.Msg
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players:Chat([[m/                                                                                                                                                                                                                                                                                                                                                                                 
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	]]..User.Text..": "..Msg.Text..[[
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	  ]])
+	end)
+end
+coroutine.wrap(YBSCZ_fake_script)()
+local function LHDGNI_fake_script() -- m.Dragable 
+	local script = Instance.new('LocalScript', m)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(LHDGNI_fake_script)()
+local function GOAO_fake_script() -- Close_3.LocalScript 
+	local script = Instance.new('LocalScript', Close_3)
+
+	local Frame = script.Parent.Parent
+	script.Parent.MouseButton1Click:Connect(function()
+		if Frame.Visible == true then
+			Frame.Visible = false
+			script.Parent.Parent.Parent.Frame.Visible = true
+		end
+	end)
+end
+coroutine.wrap(GOAO_fake_script)()
+local function SYZKU_fake_script() -- Chat_2.Script 
+	local script = Instance.new('Script', Chat_2)
+
+	local User = script.Parent.Parent.User
+	local Msg = script.Parent.Parent.Msg
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players:Chat([[h                                                                                                                                                                                                                                                                                                                                                                                 
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	]]..User.Text..": "..Msg.Text..[[
+	    
+	    
+	    
+	    
+	
+	    
+	    
+	    
+	    
+	 ]])
+	end)
+end
+coroutine.wrap(SYZKU_fake_script)()
+local function VWGYG_fake_script() -- h.Dragable 
+	local script = Instance.new('LocalScript', h)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(VWGYG_fake_script)()
+local function WAEAG_fake_script() -- Destroy.LocalScript 
+	local script = Instance.new('LocalScript', Destroy)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent:Destroy()
+		
+	end)
+end
+coroutine.wrap(WAEAG_fake_script)()
