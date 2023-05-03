@@ -1,0 +1,19 @@
+local gamefolder = game:GetService("Workspace").Terrain["_Game"]
+if not gamefolder:FindFirstChild("PhantomStorage") then
+    local PStore = Instance.new("Folder")
+    PStore.Name = "PhantomStorage"
+    PStore.Parent = gamefolder
+end
+
+local Storage = gamefolder["PhantomStorage"] -- PhantomStorage folder
+
+-- Delete phantom parts 
+-- game:GetService("Workspace").Terrain["_Game"]["PhantomStorage"]:Destroy()
+
+local Phantom_Baseplate = Instance.new("Part")
+Phantom_Baseplate.BrickColor = BrickColor.new("Bright green")
+Phantom_Baseplate.Material = Enum.Material.Plastic
+Phantom_Baseplate.Position = Vector3. new(0, 0.1, 0)
+Phantom_Baseplate.Size = Vector3. new(1000, 1.2, 1000)
+Phantom_Baseplate.Anchored = true
+Phantom_Baseplate.Parent = Storage
