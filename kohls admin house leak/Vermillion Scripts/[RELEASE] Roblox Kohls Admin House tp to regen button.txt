@@ -1,0 +1,4 @@
+
+-- https://v3rmillion.net/showthread.php?tid=933104
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Terrain.GameFolder.Admin.Regen.CFrame + Vector3.new(0, 5, 0)

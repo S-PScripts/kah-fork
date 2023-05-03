@@ -1,0 +1,7 @@
+--Note, you can still do exploits
+
+while true do
+game.Players:Chat(":removetools others")
+wait()
+end
+--Makes others unable to use exploits. Stops idiots from kicking or banning you, lel.

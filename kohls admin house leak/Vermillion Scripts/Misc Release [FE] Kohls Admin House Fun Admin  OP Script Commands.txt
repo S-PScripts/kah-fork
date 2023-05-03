@@ -1,0 +1,757 @@
+-- https://v3rmillion.net/showthread.php?tid=807024
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ";
+    Text  = "Press F9 to see commands.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ";
+})
+
+print([[
+
+
+New Commands
+
+[Local Only] angel me - gives player wings
+[Local Only] bear.exe me - turns player into a gigantic bear that can shoot bears out of a gun
+[Others Can Use] biggerhead [player] - turns player into a biggerhead
+[Others Can Use] bighead [player] - turns player into a bighead
+[Others Can Use] darkness - makes the server completely dark
+[Local Only] evil_z me - turns player into evil z
+[Others Can Use] flying_part_morph [player] - turns player into a flying part
+[Local Only] lard_zepla me - turns player into lard_zepla
+[Local Only] le_s4tan me - turns player into le s4tan [powerful!]
+[Others Can Use] minecraft_creeper [player] - turns player into a creeper which explodes after about 5 seconds
+[Local Only] moon_god me - turns player into moon god
+[Others Can Use] giant [player] - turns player into a giant noob
+[Local Only] ninja me - turns player into a ninja which can shoot ninja stars
+[Others Can Use] scare - sets everyone's walkspeed to 0 until you die
+[Others Can Use] purge - starts the purge
+[Others Can Use] zawarudo - freezes everyone temporarily and makes the lighting turn green, ends after 10 seconds
+
+[Local Only] fixcharacter - fixes your character
+[Local Only] unlockworkspace - unlocks the workspace [btools] - others see the changes
+]])
+
+game:GetService("StarterGui"):SetCore("DeveloperConsoleVisible", true)
+
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+game.Players:Chat("give me delete")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.Delete
+game.Players.LocalPlayer.Backpack.Delete.delete:FireServer(Workspace.Terrain.GameFolder.Admin.Regen)
+repeat game:GetService("RunService").Stepped:wait()
+until not workspace.Terrain.GameFolder.Admin.Regen
+game.Players:Chat("removetools me")
+wait(.1)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "angel" or msg == "angel me" then
+game.Players:Chat("gear me 223785473")
+game.Players:Chat("sparkles me")
+game.Players:Chat("paint me white")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.RedcliffWings
+game.Players.LocalPlayer.Backpack.RedcliffWings.CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.RedcliffWings then
+game.Players.LocalPlayer.Backpack.RedcliffWings.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "bear.exe" or msg == "bear.exe me" then
+game.Players:Chat("dog me")
+game.Players:Chat("removehats me")
+game.Players:Chat("paint me brown")
+game.Players:Chat("size me 4")
+game.Players:Chat("gear me 90718350")
+game.Players:Chat("speed me 12")
+game.Players:Chat("health me 3000")
+game.Players:Chat("hat me 315550843")
+game.Players:Chat("name me Bear.exe")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.BearHugger
+game.Players.LocalPlayer.Backpack.BearHugger.CanBeDropped = false
+game.Players.LocalPlayer.Backpack.BearHugger.Parent = game.Players.LocalPlayer.Character
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.BearHugger then
+game.Players.LocalPlayer.Backpack.BearHugger.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,11) == "biggerhead " then
+local victim = msg:sub(12, #msg)
+game.Players:Chat("invisible "..victim)
+game.Players:Chat("removehats "..victim)
+game.Players:Chat("hat "..victim.." 1048213")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,8) == "bighead " then
+local victim = msg:sub(9, #msg)
+game.Players:Chat("invisible "..victim)
+game.Players:Chat("removehats "..victim)
+game.Players:Chat("hat "..victim.." 1048037")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+    if msg == "darkness" then
+game.Players:Chat("music 180696430")
+repeat
+game.Players:Chat("fogcolor 0 0 0")
+game.Players:Chat("fogend")
+game.Players:Chat("time 2")
+game.Players:Chat("blind all")
+wait(1)
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.Players:Chat("fix")
+game.Players:Chat("stopmusic")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "evil_z" or msg == "evil_z me" then
+game.Players:Chat("particle me a")
+game.Players:Chat("gear me 168141301")
+game.Players:Chat("health me 300")
+game.Players:Chat("speed me 40")
+game.Players:Chat("trail me red")
+game.Players:Chat("paint me white")
+game.Players:Chat("removehats me")
+game.Players:Chat("name me Evil Z")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"]
+game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"].CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"] then
+game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"].Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,18) == "flying_part_morph " then
+local victim = msg:sub(19, #msg)
+PartMorphSize = "2"
+game.Players:Chat("char me 98795175")
+wait(.3)
+for i=1,12 do
+game.Players:Chat("size "..victim.." .5")
+end
+game.Players:Chat("unsize "..victim)
+game.Players:Chat("shiny "..victim)
+game.Players:Chat("fly "..victim)
+game.Players:Chat("name "..victim.." Part")
+game.Players:Chat("size "..victim..PartMorphSize)
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,6) == "giant " then
+local victim = msg:sub(7, #msg)
+for i=1,6 do
+game.Players:Chat("size "..victim.." 2")
+end
+game.Players:Chat("noobify "..victim)
+game.Players:Chat("trail "..victim.." rainbow")
+game.Players:Chat("particle "..victim.." f")
+game.Players:Chat("speed "..victim.." 32")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "lard_zepla" or msg == "lard_zepla me" then
+game.Players:Chat("particle me p")
+game.Players:Chat("gear me 26017478")
+game.Players:Chat("sparkles me")
+game.Players:Chat("name me Lard Zepla")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.BluePaintballGun
+game.Players.LocalPlayer.Backpack.BluePaintballGun.CanBeDropped = false
+game.Players.LocalPlayer.Backpack.BluePaintballGun.Parent = game.Players.LocalPlayer.Character
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.BluePaintballGun then
+game.Players.LocalPlayer.Backpack.BluePaintballGun.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "le_s4tan" or msg == "le_s4tan me" then
+game.Players:Chat("char me 2")
+wait(.4)
+game.Players:Chat("paint me red")
+game.Players:Chat("glow me 255 255 255")
+game.Players:Chat("gear me 93136746")
+game.Players:Chat("speed me 24")
+game.Players:Chat("setgrav me -125")
+game.Players:Chat("name me Le S4tan")
+game.Players:Chat("size me 1.5")
+game.Players:Chat("shirt me 2386032235")
+game.Players:Chat("pants me 1390668753")
+game.Players:Chat("music 143382469")
+game.Players:Chat("time 0")
+game.Players:Chat("ambient 255 0 0")
+game.Players:Chat("brightness 0")
+game.Players:Chat("fogend 100")
+game.Players:Chat("fogcolor 255 0 0")
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge
+game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge.CanBeDropped = false
+game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge.Parent = game.Players.LocalPlayer.Character
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge then
+game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge.Parent = game.Players.LocalPlayer.Character
+end
+game.Players:Chat("god me")
+game.Players:Chat("ungod others")
+game.Players:Chat("unff others")
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+game.Players:Chat("stopmusic")
+game.Players:Chat("unchar me")
+game.Players:Chat("fix")
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,18) == "minecraft_creeper " then
+local victim = msg:sub(19, #msg)
+game.Players:Chat("creeper "..victim)
+game.Players:Chat("unff others")
+game.Players:Chat("name "..victim.." Creeper")
+game.Players:Chat("removehats "..victim)
+game.Players:Chat("hat "..victim.." 1527622")
+game.Players:Chat("speed "..victim.." 75")
+game.Players:Chat("shirt "..victim.." 99862433")
+game.Players:Chat("pants "..victim.." 2981994440")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "moon_god" or msg == "moon_god me" then
+game.Players:Chat("removehats me")
+game.Players:Chat("paint me gray")
+game.Players:Chat("glow me 255 255 255")
+game.Players:Chat("gear me 80661504")
+game.Players:Chat("speed me 25")
+game.Players:Chat("setgrav me -125")
+game.Players:Chat("sparkles me")
+game.Players:Chat("name me Moon God")
+game.Players:Chat("size me 1.375")
+game.Players:Chat("shirt me 2194072245")
+game.Players:Chat("pants me 1358802762")
+game.Players:Chat("god me")
+game.Players:Chat("music 209322206")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.ChartreusePeriastron
+game.Players.LocalPlayer.Backpack.ChartreusePeriastron.CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.ChartreusePeriastron then
+game.Players.LocalPlayer.Backpack.ChartreusePeriastron.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+game.Players:Chat("stopmusic")
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "ninja" or msg == "ninja me" then
+game.Players:Chat("removehats me")
+game.Players:Chat("shirt me 288690414")
+game.Players:Chat("pants me 1317349860")
+game.Players:Chat("hat me 340624172")
+game.Players:Chat("health me 200")
+game.Players:Chat("gear me 11377306")
+game.Players:Chat("name me Ninja")
+game.Players:Chat("sparkles me")
+game.Players:Chat("speed me 30")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight
+game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight.CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight then
+game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+game.Players:Chat("stopmusic")
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do	    i.Chatted:connect(function(msg)
+    if msg == "scare" then
+repeat
+game.Players:Chat("speed all 0")
+wait(2)
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+    if msg == "purge" then
+game.Players:Chat("music 232554097")
+repeat
+game.Players:Chat("fogend 150")
+game.Players:Chat("time 2")
+game.Players:Chat("fogcolor 0 0 0")
+game.Players:Chat("brightness 5")
+wait(2)
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+    if msg == "zawarudo" then
+game.Players:Chat("music 304787933")
+wait(2)
+game.Players:Chat("freeze all")
+game.Players:Chat("ambient 0 63.75 0")
+wait(.25)
+game.Players:Chat("ambient 0 127.5 0")
+wait(.25)
+game.Players:Chat("ambient 0 191.25 0")
+wait(.25)
+game.Players:Chat("ambient 0 255 0")
+wait(.25)
+game.Players:Chat("stopmusic")
+wait(1.5)
+game.Players:Chat("music 384043882")
+for i=1,20 do
+game.Players:Chat("freeze all")
+game.Players:Chat("ambient 0 255 0")
+wait(.5)
+end
+game.Players:Chat("music 676242549")
+wait(2.5)
+game.Players:Chat("stopmusic")
+game.Players:Chat("thaw all")
+game.Players:Chat("ambient 0 255 0")
+wait(.25)
+game.Players:Chat("ambient 0 191.25 0")
+wait(.25)
+game.Players:Chat("ambient 0 127.5 0")
+wait(.25)
+game.Players:Chat("ambient 0 63.75 0")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":angel" or msg == ":angel me" then
+game.Players:Chat("gear me 223785473")
+game.Players:Chat("sparkles me")
+game.Players:Chat("paint me white")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.RedcliffWings
+game.Players.LocalPlayer.Backpack.RedcliffWings.CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.RedcliffWings then
+game.Players.LocalPlayer.Backpack.RedcliffWings.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":bear.exe" or msg == ":bear.exe me" then
+game.Players:Chat("dog me")
+game.Players:Chat("removehats me")
+game.Players:Chat("paint me brown")
+game.Players:Chat("size me 4")
+game.Players:Chat("gear me 90718350")
+game.Players:Chat("speed me 12")
+game.Players:Chat("health me 3000")
+game.Players:Chat("hat me 315550843")
+game.Players:Chat("name me Bear.exe")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.BearHugger
+game.Players.LocalPlayer.Backpack.BearHugger.CanBeDropped = false
+game.Players.LocalPlayer.Backpack.BearHugger.Parent = game.Players.LocalPlayer.Character
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.BearHugger then
+game.Players.LocalPlayer.Backpack.BearHugger.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,11) == ":biggerhead " then
+local victim = msg:sub(12, #msg)
+game.Players:Chat("invisible "..victim)
+game.Players:Chat("removehats "..victim)
+game.Players:Chat("hat "..victim.." 1048213")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,8) == ":bighead " then
+local victim = msg:sub(9, #msg)
+game.Players:Chat("invisible "..victim)
+game.Players:Chat("removehats "..victim)
+game.Players:Chat("hat "..victim.." 1048037")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+    if msg == ":darkness" then
+game.Players:Chat("music 180696430")
+repeat
+game.Players:Chat("fogcolor 0 0 0")
+game.Players:Chat("fogend")
+game.Players:Chat("time 2")
+game.Players:Chat("blind all")
+wait(1)
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.Players:Chat("fix")
+game.Players:Chat("stopmusic")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":evil_z" or msg == ":evil_z me" then
+game.Players:Chat("particle me a")
+game.Players:Chat("gear me 168141301")
+game.Players:Chat("health me 300")
+game.Players:Chat("speed me 40")
+game.Players:Chat("trail me red")
+game.Players:Chat("paint me white")
+game.Players:Chat("removehats me")
+game.Players:Chat("name me Evil Z")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"]
+game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"].CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"] then
+game.Players.LocalPlayer.Backpack["Ice Dragon Slaying Sword"].Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,18) == ":flying_part_morph " then
+local victim = msg:sub(19, #msg)
+PartMorphSize = "2"
+game.Players:Chat("char me 98795175")
+wait(.3)
+for i=1,12 do
+game.Players:Chat("size "..victim.." .5")
+end
+game.Players:Chat("unsize "..victim)
+game.Players:Chat("shiny "..victim)
+game.Players:Chat("fly "..victim)
+game.Players:Chat("name "..victim.." Part")
+game.Players:Chat("size "..victim..PartMorphSize)
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,6) == ":giant " then
+local victim = msg:sub(7, #msg)
+for i=1,6 do
+game.Players:Chat("size "..victim.." 2")
+end
+game.Players:Chat("noobify "..victim)
+game.Players:Chat("trail "..victim.." rainbow")
+game.Players:Chat("particle "..victim.." f")
+game.Players:Chat("speed "..victim.." 32")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":lard_zepla" or msg == ":lard_zepla me" then
+game.Players:Chat("particle me p")
+game.Players:Chat("gear me 26017478")
+game.Players:Chat("sparkles me")
+game.Players:Chat("name me Lard Zepla")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.BluePaintballGun
+game.Players.LocalPlayer.Backpack.BluePaintballGun.CanBeDropped = false
+game.Players.LocalPlayer.Backpack.BluePaintballGun.Parent = game.Players.LocalPlayer.Character
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.BluePaintballGun then
+game.Players.LocalPlayer.Backpack.BluePaintballGun.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":le_s4tan" or msg == ":le_s4tan me" then
+game.Players:Chat("char me 2")
+wait(.4)
+game.Players:Chat("paint me red")
+game.Players:Chat("glow me 255 255 255")
+game.Players:Chat("gear me 93136746")
+game.Players:Chat("speed me 24")
+game.Players:Chat("setgrav me -125")
+game.Players:Chat("name me Le S4tan")
+game.Players:Chat("size me 1.5")
+game.Players:Chat("shirt me 2386032235")
+game.Players:Chat("pants me 1390668753")
+game.Players:Chat("music 143382469")
+game.Players:Chat("time 0")
+game.Players:Chat("ambient 255 0 0")
+game.Players:Chat("brightness 0")
+game.Players:Chat("fogend 100")
+game.Players:Chat("fogcolor 255 0 0")
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge
+game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge.CanBeDropped = false
+game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge.Parent = game.Players.LocalPlayer.Character
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge then
+game.Players.LocalPlayer.Backpack.TelamonsterTheChaosEdge.Parent = game.Players.LocalPlayer.Character
+end
+game.Players:Chat("god me")
+game.Players:Chat("ungod others")
+game.Players:Chat("unff others")
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+game.Players:Chat("stopmusic")
+game.Players:Chat("unchar me")
+game.Players:Chat("fix")
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg:sub(1,18) == ":minecraft_creeper " then
+local victim = msg:sub(19, #msg)
+game.Players:Chat("creeper "..victim)
+game.Players:Chat("unff others")
+game.Players:Chat("name "..victim.." Creeper")
+game.Players:Chat("removehats "..victim)
+game.Players:Chat("hat "..victim.." 1527622")
+game.Players:Chat("speed "..victim.." 75")
+game.Players:Chat("shirt "..victim.." 99862433")
+game.Players:Chat("pants "..victim.." 2981994440")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":moon_god" or msg == ":moon_god me" then
+game.Players:Chat("removehats me")
+game.Players:Chat("paint me gray")
+game.Players:Chat("glow me 255 255 255")
+game.Players:Chat("gear me 80661504")
+game.Players:Chat("speed me 25")
+game.Players:Chat("setgrav me -125")
+game.Players:Chat("sparkles me")
+game.Players:Chat("name me Moon God")
+game.Players:Chat("size me 1.375")
+game.Players:Chat("shirt me 2194072245")
+game.Players:Chat("pants me 1358802762")
+game.Players:Chat("god me")
+game.Players:Chat("music 209322206")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.ChartreusePeriastron
+game.Players.LocalPlayer.Backpack.ChartreusePeriastron.CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.ChartreusePeriastron then
+game.Players.LocalPlayer.Backpack.ChartreusePeriastron.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+game.Players:Chat("stopmusic")
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":ninja" or msg == ":ninja me" then
+game.Players:Chat("removehats me")
+game.Players:Chat("shirt me 288690414")
+game.Players:Chat("pants me 1317349860")
+game.Players:Chat("hat me 340624172")
+game.Players:Chat("health me 200")
+game.Players:Chat("gear me 11377306")
+game.Players:Chat("name me Ninja")
+game.Players:Chat("sparkles me")
+game.Players:Chat("speed me 30")
+repeat game:GetService("RunService").Stepped:wait()
+until game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight
+game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight.CanBeDropped = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+repeat game:GetService("RunService").Stepped:wait()
+if game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight then
+game.Players.LocalPlayer.Backpack.SilverNinjaStarOftheBrilliantLight.Parent = game.Players.LocalPlayer.Character
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+wait(5)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+game.Players:Chat("stopmusic")
+end
+end)
+
+for v,i in pairs(game.Players:GetChildren()) do	    i.Chatted:connect(function(msg)
+    if msg == ":scare" then
+repeat
+game.Players:Chat("speed all 0")
+wait(2)
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+    if msg == ":purge" then
+game.Players:Chat("music 232554097")
+repeat
+game.Players:Chat("fogend 150")
+game.Players:Chat("time 2")
+game.Players:Chat("fogcolor 0 0 0")
+game.Players:Chat("brightness 5")
+wait(2)
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+    if msg == ":zawarudo" then
+game.Players:Chat("music 304787933")
+wait(2)
+game.Players:Chat("freeze all")
+game.Players:Chat("ambient 0 63.75 0")
+wait(.25)
+game.Players:Chat("ambient 0 127.5 0")
+wait(.25)
+game.Players:Chat("ambient 0 191.25 0")
+wait(.25)
+game.Players:Chat("ambient 0 255 0")
+wait(.25)
+game.Players:Chat("stopmusic")
+wait(1.5)
+game.Players:Chat("music 384043882")
+for i=1,20 do
+game.Players:Chat("freeze all")
+game.Players:Chat("ambient 0 255 0")
+wait(.5)
+end
+game.Players:Chat("music 676242549")
+wait(2.5)
+game.Players:Chat("stopmusic")
+game.Players:Chat("thaw all")
+game.Players:Chat("ambient 0 255 0")
+wait(.25)
+game.Players:Chat("ambient 0 191.25 0")
+wait(.25)
+game.Players:Chat("ambient 0 127.5 0")
+wait(.25)
+game.Players:Chat("ambient 0 63.75 0")
+end
+end)
+end
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "fixcharacter" then
+game.Players:Chat("unchar me")
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":fixcharacter" then
+game.Players:Chat("unchar me")
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == "unlockworkspace" or msg == "unlockws" then
+for i,v in pairs(game:GetDescendants()) do
+if v:IsA("BasePart") then
+v.Locked = false
+end
+end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+    if msg == ":unlockworkspace" or msg == ":unlockws" then
+for i,v in pairs(game:GetDescendants()) do
+if v:IsA("BasePart") then
+v.Locked = false
+end
+end
+end
+end)

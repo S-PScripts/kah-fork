@@ -1,0 +1,7 @@
+local Victim = "" -- The player you want to ban
+
+game.Players:Chat("btools me")
+wait(.25)
+game:GetService("RunService").Stepped:connect(function()
+game.Players.LocalPlayer.Backpack.Delete.delete:FireServer(game.Players(Victim)
+end)

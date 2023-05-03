@@ -1,0 +1,105 @@
+local X = "all" -- Change to all if you want everybody including you to not use abusive commands. Change to others if you want everybody but you to use abusive commands. (If you change to others, if someone says something like :punish all, you will still be punished). Change to me if you want commands to not be done on you but can still be done on everyone else. Or you can change to specific people.
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":kill all" or msg == ":kill others" or msg == "kill others" or msg == "kill all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":explode all" or msg == ":explode others" or msg == "explode others" or msg == "explode all" then
+        game.Players:Chat(":respawn all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":fly all" or msg == ":fly others" or msg == "fly others" or msg == "fly all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":dog all" or msg == ":dog others" or msg == "dog others" or msg == "dog all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":noobify all" or msg == ":noobify others" or msg == "noobify others" or msg == "noobify all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":ghostify all" or msg == ":noobify others" or msg == "noobify others" or msg == "noobify all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == ":bonfire all" or msg == ":bonfire others" or msg == "bonfire others" or msg == "bonfire all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == "rocket/all" or msg == "rocket/others" or msg == "kill/all" or msg == "kill/others" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == "explode/others" or msg == "fly/all" or msg == "fly/others" or msg == "explode/all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Chatted:connect(function(msg)
+if msg == "explode/others" or msg == "fly/all" or msg == "fly/others" or msg == "explode/all" then
+        game.Players:Chat(":refresh all")
+end
+end)
+end
+
+game.Players:Chat(":respawn me")
+
+game:GetService("RunService").Stepped:connect(function()
+game.Players:Chat(":removetools others")
+game.Players:Chat(":unpunish "..X)
+game.Players:Chat(":unjail "..X)
+game.Players:Chat(":removejails")
+game.Players:Chat(":unclone "..X)
+game.Players:Chat(":removeclones")
+game.Players:Chat(":unsit "..X)
+game.Players:Chat(":unstun "..X)
+game.Players:Chat(":unspin "..X)
+game.Players:Chat(":normaljump "..X)
+game.Players:Chat(":speed "..X.." 16")
+game.Players:Chat(":fix")
+game.Players:Chat(":clr")
+game.Players:Chat(":heal "..X)
+game.Players:Chat(":unname "..X)
+game.Players:Chat(":lock "..X)
+game.Players:Chat(":unblind "..X)
+game.Players:Chat(":unswagify "..X)
+game.Players:Chat(":unflash "..X)
+end)

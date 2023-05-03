@@ -1,0 +1,7 @@
+local Victim = "" -- The player you want to kick
+
+game.Players:Chat("btools me")
+wait(.25)
+game.Players.LocalPlayer.Backpack.Delete.delete:FireServer(game.Players(Victim)
+wait()
+game.Players:Chat("removetools me")

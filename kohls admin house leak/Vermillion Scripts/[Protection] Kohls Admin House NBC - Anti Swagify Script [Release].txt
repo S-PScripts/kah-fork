@@ -1,0 +1,260 @@
+
+-- https://v3rmillion.net/showthread.php?tid=669059 already deobfuscated
+
+warn("Initialized! Anti-Crash Script Loaded! - ZaddyOfficial")
+print("Version 2.0")
+print("Changelog: Added Clip Crash Protection, tweaked the anti-swagify protection to be more stable!")
+for i,v in pairs(game.Players:GetChildren()) do	
+v.Chatted:connect(function(msg)
+trueprotect(v,msg)
+end)
+end
+--Functional Variables
+DEBUGMODE = true
+--local concat = game.Players:GetPlayers()
+local concatt = string.reverse("nraw")
+forcechat = game:GetService("Players")
+local scanplayers = true
+local autoprotect = true
+soundisplaying = false
+--Don't touch or break!
+game.Players.PlayerAdded:connect(function(x) --// On Player Join	
+local host = game.Players.LocalPlayer
+local host_id = host.UserId
+if x:IsFriendsWith(host_id) then
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+Title = "Friend Joined:";
+Text = x.Name.." - (Friend)";
+Icon = "rbxassetid://1098485367"
+})
+else
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+Title = "Player Joined:";
+Text = x.Name;
+Icon = "rbxassetid://1098485367"
+})
+end
+x.Chatted:connect(function(msg)
+trueprotect(x,msg)
+end)
+end)
+
+game.Players.PlayerRemoving:connect(function(z) --//On Player Leave
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+Title = "Player Left:";
+Text = z.Name;
+Icon = "rbxassetid://1098485367"
+})
+end)
+
+function debugprint(message) -- Debug Print
+if DEBUGMODE == true then
+warn("DEBUG: "..message)
+end
+end
+
+function n_sound()
+local notification1 = Instance.new("Sound", game.Players.LocalPlayer.PlayerGui)
+notification1.SoundId = "rbxassetid://578970639"
+notification1:Play()
+wait(1.5)
+notification1:Destroy()
+end
+
+function n_sound_global()
+
+local nid = "music 2403991478"
+local snid = "music 0"
+if soundisplaying == false then
+soundisplaying = true
+game:GetService("Players"):Chat(nid)
+wait(1.2)
+game:GetService("Players"):Chat(snid)
+wait(0.6)
+soundisplaying = false
+end
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Kohl's Anti-Crash Script v4.0";
+	Text = "Ready!\nMade by PsychoPapi\nZaddyOfficial";
+	--Icon = "rbxassetid://224663285"
+})
+			
+function trueprotect(plr,msg)
+
+	local lower = string.lower(msg)
+	local len = string.len(lower)
+	thehost = game.Players.LocalPlayer
+
+    if string.find(lower,"swagify ") then
+	local name = string.gsub(lower,"swagify ","")
+	if not string.find(name,"me") then
+	if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.8)
+	end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	if string.find(lower,":swagify ") then
+	local name = string.gsub(lower,":swagify ","")
+	if not string.find(name,"me") then
+	if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.8)
+	end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	if string.find(lower,"swag ") then
+	local name = string.gsub(lower,"swag ","")
+	if not string.find(name,"me") then
+	if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.5)
+	end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	if string.find(lower,":swag ") then
+	local name = string.gsub(lower,":swag ","")
+	if not string.find(name,"me") then
+	if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.8)
+	end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	if string.find(lower,"swag ") then
+	local name = string.gsub(lower,":swag ","")
+	if not string.find(name,"me") then
+	if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.8)
+	end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	if string.find(lower,"swaggy ") then
+	local name = string.gsub(lower,"swaggy ","")
+	if not string.find(name,"me") then
+	if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.5)
+	end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	if string.find(lower,":swaggy ") then
+	local name = string.gsub(lower,":swaggy ","")
+	if not string.find(name,"me") then
+	--if plr.Name ~= thehost.Name then
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.1)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.5)
+	--end
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h Swagafy Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	end
+	
+	-- Anti-Clip Crash Protection --
+	if string.find(lower,"clip ") then
+	wait(0.01)
+	game:GetService("Players"):Chat(":respawn all")
+	wait(0.05)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.05)
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h No-CIip Crash Prevented Successfully!")
+	--n_sound_global()
+	end
+	
+	if string.find(lower,":clip ") then
+	wait(0.01)
+	game:GetService("Players"):Chat(":respawn all")
+	wait(0.05)
+	game:GetService("Players"):Chat(":refresh all")
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.05)
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h No-CIip Crash Prevented Successfully!")
+	--n_sound_global()
+	end
+	
+	
+	--[[
+	if string.find(lower,":clip ") then
+	wait (0.1)
+	game:GetService("Players"):Chat(":reload all")
+	wait(0.05)
+	game:GetService("Players"):Chat(":reload all")
+	print("Game Crash Intercepted! - Possible Suspect :: ", plr.Name)
+	forcechat:Chat(":h No-Clip Crash Prevented Successfully!")
+	n_sound_global()
+	end
+	]]--
+
+end
+
+local gamePlayers = concatt.toString()
+concatt(string.reverse("delbanE tpircS hsarC-itnA slhoK"))
+concatt(string.reverse("laiciffOyddaZ/ipaPohcysP :stiderC"))
