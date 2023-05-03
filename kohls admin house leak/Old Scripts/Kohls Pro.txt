@@ -1,0 +1,351 @@
+-- Kohls Pro v1 (Beta)
+-- By ( ∩ ͡ ° ͜ ʖ ͡ ° )⊃#6087
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Perm = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local KillAll = Instance.new("TextButton")
+local ResetAll = Instance.new("TextButton")
+local Skydiveothers = Instance.new("TextButton")
+local PunishOthers = Instance.new("TextButton")
+local ExplodeOthers = Instance.new("TextButton")
+local RespawnAll = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local GetPads = Instance.new("TextButton")
+local Get1Pad = Instance.new("TextButton")
+local RemoveObby = Instance.new("TextButton")
+local TpHouse = Instance.new("TextButton")
+local TpSpawn = Instance.new("TextButton")
+local Crash = Instance.new("TextButton")
+local Fog = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 3
+Main.Position = UDim2.new(0.0670220852, 0, 0.290797532, 0)
+Main.Size = UDim2.new(0, 327, 0, 390)
+Main.Visible = false
+Main.Active = true
+Main.Draggable = true
+
+Perm.Name = "Perm"
+Perm.Parent = Main
+Perm.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+Perm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Perm.BorderSizePixel = 5
+Perm.Position = UDim2.new(0.0543769151, 0, 0.169230759, 0)
+Perm.Size = UDim2.new(0, 95, 0, 24)
+Perm.Font = Enum.Font.GothamBlack
+Perm.Text = "Perm"
+Perm.TextColor3 = Color3.fromRGB(0, 0, 0)
+Perm.TextSize = 15.000
+Perm.TextWrapped = true
+Perm.MouseButton1Down:Connect(function()
+	getgenv().niggaballs = true
+	while getgenv().niggaballs == true do
+		local pads = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:GetChildren("Head")
+		for i, pad in pairs(pads) do
+			local cre = pad.Head
+			local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
+			firetouchinterest(cre, spr, 1)
+			wait()
+			firetouchinterest(cre, spr, 0)
+
+			if pad.Name ~= game.Players.LocalPlayer.Name.."'s admin" then
+				fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
+			end
+		end
+	end
+end)
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 5
+TextLabel.Size = UDim2.new(0, 327, 0, 34)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Kohls Pro v1 (Beta)"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+KillAll.Name = "KillAll"
+KillAll.Parent = Main
+KillAll.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+KillAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.BorderSizePixel = 5
+KillAll.Position = UDim2.new(0.656823397, 0, 0.169230759, 0)
+KillAll.Size = UDim2.new(0, 95, 0, 24)
+KillAll.Font = Enum.Font.GothamBlack
+KillAll.Text = "Kill-All"
+KillAll.TextColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.TextSize = 15.000
+KillAll.TextWrapped = true
+KillAll.MouseButton1Down:Connect(function()
+	game.Players:Chat("kill all")
+end)
+
+ResetAll.Name = "ResetAll"
+ResetAll.Parent = Main
+ResetAll.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+ResetAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ResetAll.BorderSizePixel = 5
+ResetAll.Position = UDim2.new(0.656823397, 0, 0.29743588, 0)
+ResetAll.Size = UDim2.new(0, 95, 0, 24)
+ResetAll.Font = Enum.Font.GothamBlack
+ResetAll.Text = "Reset-All"
+ResetAll.TextColor3 = Color3.fromRGB(0, 0, 0)
+ResetAll.TextSize = 15.000
+ResetAll.TextWrapped = true
+ResetAll.MouseButton1Down:Connect(function()
+	game.Players:Chat("reset all")
+end)
+
+Skydiveothers.Name = "Skydiveothers"
+Skydiveothers.Parent = Main
+Skydiveothers.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+Skydiveothers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Skydiveothers.BorderSizePixel = 5
+Skydiveothers.Position = UDim2.new(0.656823397, 0, 0.425641, 0)
+Skydiveothers.Size = UDim2.new(0, 95, 0, 24)
+Skydiveothers.Font = Enum.Font.GothamBlack
+Skydiveothers.Text = "SkyDive-Others"
+Skydiveothers.TextColor3 = Color3.fromRGB(0, 0, 0)
+Skydiveothers.TextSize = 15.000
+Skydiveothers.TextWrapped = true
+Skydiveothers.MouseButton1Down:Connect(function()
+	game.Players:Chat("skydive others")
+end)
+
+PunishOthers.Name = "PunishOthers"
+PunishOthers.Parent = Main
+PunishOthers.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+PunishOthers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PunishOthers.BorderSizePixel = 5
+PunishOthers.Position = UDim2.new(0.656823397, 0, 0.546153843, 0)
+PunishOthers.Size = UDim2.new(0, 95, 0, 24)
+PunishOthers.Font = Enum.Font.GothamBlack
+PunishOthers.Text = "Punish-Others"
+PunishOthers.TextColor3 = Color3.fromRGB(0, 0, 0)
+PunishOthers.TextSize = 15.000
+PunishOthers.TextWrapped = true
+PunishOthers.MouseButton1Down:Connect(function()
+	game.Players:Chat("punish others")
+end)
+
+ExplodeOthers.Name = "ExplodeOthers"
+ExplodeOthers.Parent = Main
+ExplodeOthers.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+ExplodeOthers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExplodeOthers.BorderSizePixel = 5
+ExplodeOthers.Position = UDim2.new(0.656823397, 0, 0.671794891, 0)
+ExplodeOthers.Size = UDim2.new(0, 95, 0, 24)
+ExplodeOthers.Font = Enum.Font.GothamBlack
+ExplodeOthers.Text = "Explode-Others"
+ExplodeOthers.TextColor3 = Color3.fromRGB(0, 0, 0)
+ExplodeOthers.TextSize = 15.000
+ExplodeOthers.TextWrapped = true
+ExplodeOthers.MouseButton1Down:Connect(function()
+	game.Players:Chat("explode others")
+end)
+
+RespawnAll.Name = "RespawnAll"
+RespawnAll.Parent = Main
+RespawnAll.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+RespawnAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RespawnAll.BorderSizePixel = 5
+RespawnAll.Position = UDim2.new(0.656823397, 0, 0.79743588, 0)
+RespawnAll.Size = UDim2.new(0, 95, 0, 24)
+RespawnAll.Font = Enum.Font.GothamBlack
+RespawnAll.Text = "Respawn-All"
+RespawnAll.TextColor3 = Color3.fromRGB(0, 0, 0)
+RespawnAll.TextSize = 15.000
+RespawnAll.TextWrapped = true
+RespawnAll.MouseButton1Down:Connect(function()
+	game.Players:Chat("respawn all")
+end)
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(157, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 5
+Close.Position = UDim2.new(0.977924287, 0, -0.0358974375, 0)
+Close.Size = UDim2.new(0, 24, 0, 24)
+Close.Font = Enum.Font.GothamBlack
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 28.000
+Close.TextWrapped = true
+Close.MouseButton1Down:Connect(function()
+	Main.Visible = false
+	openmain.Visible = true
+end)
+
+GetPads.Name = "GetPads"
+GetPads.Parent = Main
+GetPads.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+GetPads.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GetPads.BorderSizePixel = 5
+GetPads.Position = UDim2.new(0.0543769114, 0, 0.29743588, 0)
+GetPads.Size = UDim2.new(0, 95, 0, 24)
+GetPads.Font = Enum.Font.GothamBlack
+GetPads.Text = "Get-All-Pads"
+GetPads.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetPads.TextSize = 15.000
+GetPads.TextWrapped = true
+GetPads.MouseButton1Down:Connect(function()
+	for i,v in pairs(game:GetService("Workspace").Terrain["_Game"].Admin.Pads:GetChildren("Touch to get admin")) do
+		local cre = v.Head
+		local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
+		firetouchinterest(cre, spr, 1)
+		wait()
+		firetouchinterest(cre, spr, 0)
+	end
+end)
+
+Get1Pad.Name = "Get1Pad"
+Get1Pad.Parent = Main
+Get1Pad.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+Get1Pad.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Get1Pad.BorderSizePixel = 5
+Get1Pad.Position = UDim2.new(0.0543769002, 0, 0.42564103, 0)
+Get1Pad.Size = UDim2.new(0, 95, 0, 24)
+Get1Pad.Font = Enum.Font.GothamBlack
+Get1Pad.Text = "Get-1Pad"
+Get1Pad.TextColor3 = Color3.fromRGB(0, 0, 0)
+Get1Pad.TextSize = 15.000
+Get1Pad.TextWrapped = true
+Get1Pad.MouseButton1Down:Connect(function()
+	local greenpad = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin")
+	local cre = greenpad.Head
+	local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
+	firetouchinterest(cre, spr, 1)
+	wait()
+	firetouchinterest(cre, spr, 0)
+end)
+
+RemoveObby.Name = "RemoveObby"
+RemoveObby.Parent = Main
+RemoveObby.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+RemoveObby.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RemoveObby.BorderSizePixel = 5
+RemoveObby.Position = UDim2.new(0.0543769002, 0, 0.546153843, 0)
+RemoveObby.Size = UDim2.new(0, 95, 0, 24)
+RemoveObby.Font = Enum.Font.GothamBlack
+RemoveObby.Text = "Remove-Obby"
+RemoveObby.TextColor3 = Color3.fromRGB(0, 0, 0)
+RemoveObby.TextSize = 15.000
+RemoveObby.TextWrapped = true
+RemoveObby.MouseButton1Down:Connect(function()
+	for i,v in pairs(game:GetService("Workspace").Terrain["_Game"].Workspace.Obby:GetChildren()) do
+		v:Destroy()
+	end
+end)
+
+TpHouse.Name = "TpHouse"
+TpHouse.Parent = Main
+TpHouse.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+TpHouse.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpHouse.BorderSizePixel = 5
+TpHouse.Position = UDim2.new(0.0543769002, 0, 0.671794891, 0)
+TpHouse.Size = UDim2.new(0, 95, 0, 24)
+TpHouse.Font = Enum.Font.GothamBlack
+TpHouse.Text = "Tp-House"
+TpHouse.TextColor3 = Color3.fromRGB(0, 0, 0)
+TpHouse.TextSize = 15.000
+TpHouse.TextWrapped = true
+TpHouse.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-29.0137, 8.23, 73.9164))
+end)
+
+TpSpawn.Name = "TpSpawn"
+TpSpawn.Parent = Main
+TpSpawn.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+TpSpawn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpSpawn.BorderSizePixel = 5
+TpSpawn.Position = UDim2.new(0.0543769002, 0, 0.79743588, 0)
+TpSpawn.Size = UDim2.new(0, 95, 0, 24)
+TpSpawn.Font = Enum.Font.GothamBlack
+TpSpawn.Text = "Tp-Spawn"
+TpSpawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+TpSpawn.TextSize = 15.000
+TpSpawn.TextWrapped = true
+TpSpawn.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-41.2423, 6.93992, -23.4294))
+end)
+
+Fog.Name = "Fog"
+Fog.Parent = Main
+Fog.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+Fog.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fog.BorderSizePixel = 5
+Fog.Position = UDim2.new(0.0543769002, 0, 0.912820518, 0)
+Fog.Size = UDim2.new(0, 95, 0, 24)
+Fog.Font = Enum.Font.GothamBlack
+Fog.Text = "Fog-Sky"
+Fog.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fog.TextSize = 15.000
+Fog.TextWrapped = true
+Fog.MouseButton1Down:Connect(function()
+	game.Players:Chat("fogend 0")
+end)
+
+Crash.Name = "Crash"
+Crash.Parent = Main
+Crash.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+Crash.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crash.BorderSizePixel = 5
+Crash.Position = UDim2.new(0.656823397, 0, 0.912820518, 0)
+Crash.Size = UDim2.new(0, 95, 0, 24)
+Crash.Font = Enum.Font.GothamBlack
+Crash.Text = "Crash"
+Crash.TextColor3 = Color3.fromRGB(0, 0, 0)
+Crash.TextSize = 15.000
+Crash.TextWrapped = true
+Crash.MouseButton1Down:Connect(function()
+	game.Players:Chat("h Game Crashed .. :(")
+	game.Players:Chat("resapwn all")
+	while true do wait(1)
+		for i = 1,3 do game.Players:Chat("size all 0.3") end
+		game.Players:Chat("freeze all")
+		for i = 1,3 do game.Players:Chat("size all 10") end
+		game.Players:Chat("clone all")
+	end
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0.00913937576, 0, 0.184049085, 0)
+openmain.Size = UDim2.new(0, 100, 0, 24)
+openmain.Active = true
+openmain.Draggable = true
+
+Open.Name = "Open"
+Open.Parent = openmain
+Open.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 5
+Open.Size = UDim2.new(0, 100, 0, 24)
+Open.Font = Enum.Font.GothamBlack
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 14.000
+Open.MouseButton1Down:Connect(function()
+openmain.Visible = false
+Main.Visible = true
+end)

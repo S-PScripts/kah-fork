@@ -1,0 +1,4 @@
+(txt made by DIY)
+useful if your executor stopped working/cant inject because of roblox
+
+Requirement: https://www.autohotkey.com (windows only)

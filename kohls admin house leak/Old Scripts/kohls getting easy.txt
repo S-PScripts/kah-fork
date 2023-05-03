@@ -1,0 +1,472 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Perm = Instance.new("TextButton")
+local ReObby = Instance.new("TextButton")
+local TextLabel = Instance.new("TextButton")
+local ShoutOut = Instance.new("TextButton")
+local Crash = Instance.new("TextButton")
+local GetAdmin = Instance.new("TextButton")
+local Tphouse = Instance.new("TextButton")
+local Regen = Instance.new("TextButton")
+local Resetall = Instance.new("TextButton")
+local Gears = Instance.new("TextButton")
+local Killall = Instance.new("TextButton")
+local Explodeall = Instance.new("TextButton")
+local Join = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local AllPads = Instance.new("TextButton")
+local ClrJails = Instance.new("TextButton")
+local ToSpawn = Instance.new("TextButton")
+local FuckGame = Instance.new("TextButton")
+local SkydiveAll = Instance.new("TextButton")
+local BugTerrarin = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+main.Position = UDim2.new(0.0722263679, 0, 0.261349708, 0)
+main.Size = UDim2.new(0, 399, 0, 396)
+main.Active = true
+main.Draggable = true
+
+Perm.Name = "Perm"
+Perm.Parent = main
+Perm.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Perm.Position = UDim2.new(0.0593546107, 0, 0.206240684, 0)
+Perm.Size = UDim2.new(0, 109, 0, 37)
+Perm.Font = Enum.Font.Cartoon
+Perm.Text = "Perm"
+Perm.TextColor3 = Color3.fromRGB(0, 0, 0)
+Perm.TextSize = 20.000
+Perm.TextWrapped = true
+Perm.MouseButton1Down:connect(function()
+	getgenv().niggaballs = true
+	while getgenv().niggaballs == true do
+		local pads = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:GetChildren("Head")
+		for i, pad in pairs(pads) do
+			local cre = pad.Head
+			local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
+			firetouchinterest(cre, spr, 1)
+			wait()
+			firetouchinterest(cre, spr, 0)
+
+			if pad.Name ~= game.Players.LocalPlayer.Name.."'s admin" then
+				fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
+			end
+		end
+	end
+end)
+
+ReObby.Name = "Re-Obby"
+ReObby.Parent = main
+ReObby.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ReObby.Position = UDim2.new(0.368941069, 0, 0.20438087, 0)
+ReObby.Size = UDim2.new(0, 109, 0, 37)
+ReObby.Font = Enum.Font.Cartoon
+ReObby.Text = "Re-Obby"
+ReObby.TextColor3 = Color3.fromRGB(0, 0, 0)
+ReObby.TextSize = 20.000
+ReObby.TextWrapped = true
+ReObby.MouseButton1Down:connect(function()
+	for i,v in pairs(game:GetService("Workspace").Terrain["_Game"].Workspace.Obby:GetChildren()) do
+		v:Destroy()
+	end
+end)
+
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = main
+TextLabel.Active = false
+TextLabel.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.115262829, 0, -0.00252525252, 0)
+TextLabel.Selectable = false
+TextLabel.Size = UDim2.new(0, 353, 0, 42)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Kohls Getting Easyier Gui"
+TextLabel.TextColor3 = Color3.fromRGB(95, 1, 2)
+TextLabel.TextSize = 25.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+ShoutOut.Name = "Shout-Out"
+ShoutOut.Parent = main
+ShoutOut.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ShoutOut.Position = UDim2.new(0.36851126, 0, 0.322652131, 0)
+ShoutOut.Size = UDim2.new(0, 109, 0, 37)
+ShoutOut.Font = Enum.Font.Cartoon
+ShoutOut.Text = "Shout-Out"
+ShoutOut.TextColor3 = Color3.fromRGB(0, 0, 0)
+ShoutOut.TextSize = 20.000
+ShoutOut.TextWrapped = true
+ShoutOut.MouseButton1Click:Connect(function()
+	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(game.Players.LocalPlayer.Name.. " Is Using Kohls Getting Easy Gui", "ALL")
+end)
+
+Crash.Name = "Crash"
+Crash.Parent = main
+Crash.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Crash.Position = UDim2.new(0.0587659217, 0, 0.438486785, 0)
+Crash.Size = UDim2.new(0, 109, 0, 37)
+Crash.Font = Enum.Font.Cartoon
+Crash.Text = "Crash"
+Crash.TextColor3 = Color3.fromRGB(0, 0, 0)
+Crash.TextSize = 20.000
+Crash.TextWrapped = true
+Crash.MouseButton1Click:Connect(function()
+	game.Players:Chat("h Game Crashed .. :(")
+	game.Players:Chat("resapwn all")
+	while true do wait(1)
+		for i = 1,3 do game.Players:Chat("size all 0.3") end
+		game.Players:Chat("freeze all")
+		for i = 1,3 do game.Players:Chat("size all 10") end
+		game.Players:Chat("clone all")
+	end
+end)
+
+GetAdmin.Name = "Get-Admin"
+GetAdmin.Parent = main
+GetAdmin.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+GetAdmin.Position = UDim2.new(0.368395597, 0, 0.437781036, 0)
+GetAdmin.Size = UDim2.new(0, 109, 0, 37)
+GetAdmin.Font = Enum.Font.Cartoon
+GetAdmin.Text = "Get-Pad"
+GetAdmin.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetAdmin.TextSize = 20.000
+GetAdmin.TextWrapped = true
+GetAdmin.MouseButton1Click:Connect(function()
+	local greenpad = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin")
+	local cre = greenpad.Head
+	local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
+	firetouchinterest(cre, spr, 1)
+	wait()
+	firetouchinterest(cre, spr, 0)
+end)
+
+Tphouse.Name = "Tp-house"
+Tphouse.Parent = main
+Tphouse.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Tphouse.Position = UDim2.new(0.061272189, 0, 0.322682351, 0)
+Tphouse.Size = UDim2.new(0, 109, 0, 37)
+Tphouse.Font = Enum.Font.Cartoon
+Tphouse.Text = "Tp-House"
+Tphouse.TextColor3 = Color3.fromRGB(0, 0, 0)
+Tphouse.TextSize = 20.000
+Tphouse.TextWrapped = true
+Tphouse.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-29.0137, 8.23, 73.9164))
+end)
+
+Regen.Name = "Regen"
+Regen.Parent = main
+Regen.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Regen.Position = UDim2.new(0.667063177, 0, 0.20438087, 0)
+Regen.Size = UDim2.new(0, 109, 0, 37)
+Regen.Font = Enum.Font.Cartoon
+Regen.Text = "Regen"
+Regen.TextColor3 = Color3.fromRGB(0, 0, 0)
+Regen.TextSize = 20.000
+Regen.TextWrapped = true
+Regen.MouseButton1Click:Connect(function()
+	fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
+end)
+
+Resetall.Name = "Reset all"
+Resetall.Parent = main
+Resetall.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Resetall.Position = UDim2.new(0.667063177, 0, 0.324781418, 0)
+Resetall.Size = UDim2.new(0, 109, 0, 37)
+Resetall.Font = Enum.Font.Cartoon
+Resetall.Text = "Reset-all"
+Resetall.TextColor3 = Color3.fromRGB(0, 0, 0)
+Resetall.TextSize = 20.000
+Resetall.TextWrapped = true
+Resetall.MouseButton1Click:Connect(function()
+	game.Players:Chat("reset all")
+end)
+
+Gears.Name = "Gears"
+Gears.Parent = main
+Gears.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Gears.Position = UDim2.new(0.667063177, 0, 0.437645018, 0)
+Gears.Size = UDim2.new(0, 109, 0, 37)
+Gears.Font = Enum.Font.Cartoon
+Gears.Text = "Gears"
+Gears.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gears.TextSize = 20.000
+Gears.TextWrapped = true
+Gears.MouseButton1Click:Connect(function()
+	game.Players:Chat("gear me 95951330")
+	game.Players:Chat("gear me 159229806")
+	game.Players:Chat("gear me 18474459")
+end)
+
+Killall.Name = "Killall"
+Killall.Parent = main
+Killall.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Killall.Position = UDim2.new(0.059081912, 0, 0.555591881, 0)
+Killall.Size = UDim2.new(0, 109, 0, 37)
+Killall.Font = Enum.Font.Cartoon
+Killall.Text = "Kill-all"
+Killall.TextColor3 = Color3.fromRGB(0, 0, 0)
+Killall.TextSize = 20.000
+Killall.TextWrapped = true
+Killall.MouseButton1Click:Connect(function()
+	game.Players:Chat("kill all")
+end)
+
+Explodeall.Name = "Explodeall"
+Explodeall.Parent = main
+Explodeall.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Explodeall.Position = UDim2.new(0.366436481, 0, 0.557456076, 0)
+Explodeall.Size = UDim2.new(0, 109, 0, 37)
+Explodeall.Font = Enum.Font.Cartoon
+Explodeall.Text = "Explode-all"
+Explodeall.TextColor3 = Color3.fromRGB(0, 0, 0)
+Explodeall.TextSize = 20.000
+Explodeall.TextWrapped = true
+Explodeall.MouseButton1Click:Connect(function()
+	game.Players:Chat("unff all")
+	game.Players:Chat("explode all")
+end)
+
+Join.Name = "Join"
+Join.Parent = main
+Join.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Join.Position = UDim2.new(0.666905999, 0, 0.557456076, 0)
+Join.Size = UDim2.new(0, 109, 0, 37)
+Join.Font = Enum.Font.Cartoon
+Join.Text = "Join-Diff-Server"
+Join.TextColor3 = Color3.fromRGB(0, 0, 0)
+Join.TextSize = 20.000
+Join.TextWrapped = true
+Join.MouseButton1Click:Connect(function()
+	local servers = {}
+	local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+	local req = game:HttpGet('https://games.roblox.com/v1/games/'..game.PlaceId..'/servers/Public?sortOrder=Asc&limit=100')
+	local ServersToTP = HttpService:JSONDecode(req)
+	for _, s in pairs(ServersToTP.data) do
+		if s.playing ~= s.maxPlayers then
+			servers[#servers+1] = s.id
+		end
+	end
+	pcall(function() TPService:TeleportToPlaceInstance(game.PlaceId, servers[math.random(1, #servers)]) end)
+end)
+
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(-2.53930721e-05, 0, -0.00252525252, 0)
+Close.Size = UDim2.new(0, 46, 0, 42)
+Close.Font = Enum.Font.Cartoon
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 40.000
+Close.TextWrapped = true
+Close.MouseButton1Click:Connect(function()
+	main:Destroy()
+end)
+
+AllPads.Name = "All-Pads"
+AllPads.Parent = main
+AllPads.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+AllPads.Position = UDim2.new(0.666641235, 0, 0.681800067, 0)
+AllPads.Size = UDim2.new(0, 109, 0, 37)
+AllPads.Font = Enum.Font.Cartoon
+AllPads.Text = "All-Pads"
+AllPads.TextColor3 = Color3.fromRGB(0, 0, 0)
+AllPads.TextSize = 20.000
+AllPads.TextWrapped = true
+AllPads.MouseButton1Click:Connect(function()
+	for i,v in pairs(game:GetService("Workspace").Terrain["_Game"].Admin.Pads:GetChildren("Touch to get admin")) do
+		local cre = v.Head
+		local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
+		firetouchinterest(cre, spr, 1)
+		wait()
+		firetouchinterest(cre, spr, 0)
+	end
+end)
+
+ClrJails.Name = "Clr-Jails"
+ClrJails.Parent = main
+ClrJails.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ClrJails.Position = UDim2.new(0.363383055, 0, 0.679407835, 0)
+ClrJails.Size = UDim2.new(0, 109, 0, 37)
+ClrJails.Font = Enum.Font.Cartoon
+ClrJails.Text = "Clr-Jails"
+ClrJails.TextColor3 = Color3.fromRGB(0, 0, 0)
+ClrJails.TextSize = 20.000
+ClrJails.TextWrapped = true
+ClrJails.MouseButton1Click:Connect(function()
+	game.Players:Chat("clr")
+end)
+
+ToSpawn.Name = "To-Spawn"
+ToSpawn.Parent = main
+ToSpawn.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ToSpawn.Position = UDim2.new(0.0565756448, 0, 0.677601457, 0)
+ToSpawn.Size = UDim2.new(0, 109, 0, 37)
+ToSpawn.Font = Enum.Font.Cartoon
+ToSpawn.Text = "Spawn"
+ToSpawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+ToSpawn.TextSize = 20.000
+ToSpawn.TextWrapped = true
+ToSpawn.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-41.2423, 6.93992, -23.4294))
+end)
+
+FuckGame.Name = "Fuck-Game"
+FuckGame.Parent = main
+FuckGame.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+FuckGame.Position = UDim2.new(0.0551124215, 0, 0.797088325, 0)
+FuckGame.Size = UDim2.new(0, 109, 0, 37)
+FuckGame.Font = Enum.Font.Cartoon
+FuckGame.Text = "F*ck-Game"
+FuckGame.TextColor3 = Color3.fromRGB(0, 0, 0)
+FuckGame.TextSize = 20.000
+FuckGame.TextWrapped = true
+FuckGame.MouseButton1Click:Connect(function()
+	game.Players:Chat("fogend 0")
+	wait(0)
+	game.Players:Chat("fogcolor 255 0 0")
+	wait(0)
+	game.Players:Chat("time 0")
+	wait(0)
+	game.Players:Chat("thaw all")
+	wait(0)
+	game.Players:Chat("m")
+	wait(0)
+	game.Players:Chat("m")
+	wait(0)
+	game.Players:Chat("m")
+	wait(0)
+	game.Players:Chat("m")
+	wait(0)
+	game.Players:Chat("m")
+	wait(0)
+	for i = 1,50 do game.Players:Chat("skydive all") end
+	game.Players:Chat("thaw all")
+	wait()
+	game.Players:Chat("fogcolor 0 255 0")
+	wait()
+	game.Players:Chat("fogcolor 0 0 255")
+	wait()
+	game.Players:Chat("m Ur Dead")
+	wait()
+	game.Players:Chat("freeze all")
+end)
+
+SkydiveAll.Name = "Skydive-All"
+SkydiveAll.Parent = main
+SkydiveAll.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+SkydiveAll.Position = UDim2.new(0.363383114, 0, 0.797088325, 0)
+SkydiveAll.Size = UDim2.new(0, 109, 0, 37)
+SkydiveAll.Font = Enum.Font.Cartoon
+SkydiveAll.Text = "SkyDive-All"
+SkydiveAll.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkydiveAll.TextSize = 20.000
+SkydiveAll.TextWrapped = true
+SkydiveAll.MouseButton1Click:Connect(function()
+	game.Players:Chat("skydive all")
+end)
+
+BugTerrarin.Name = "Bug-Terrarin"
+BugTerrarin.Parent = main
+BugTerrarin.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+BugTerrarin.Position = UDim2.new(0.666641235, 0, 0.797088325, 0)
+BugTerrarin.Size = UDim2.new(0, 109, 0, 37)
+BugTerrarin.Font = Enum.Font.Cartoon
+BugTerrarin.Text = "Bug-Terrarin"
+BugTerrarin.TextColor3 = Color3.fromRGB(0, 0, 0)
+BugTerrarin.TextSize = 20.000
+BugTerrarin.TextWrapped = true
+BugTerrarin.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-41.0006, 6.89573, -41.71))
+	wait(0.1)
+	game.Players:Chat("sit me")
+	wait(0.85)
+	game.Players:Chat("punish me")
+	wait(.1)
+	game.Players:Chat("unpunish me")
+	wait(.2)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-39.0137, 1000000, -43.9704))
+	
+game.Players:Chat("respawn me")
+end)
+
+TextLabel_2.Parent = main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(76, 75, 76)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 0, 0.103535354, 0)
+TextLabel_2.Size = UDim2.new(0, 399, 0, 10)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = ""
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = main
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(76, 75, 76)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0, 0, 0.128787875, 0)
+TextLabel_3.Size = UDim2.new(0, 7, 0, 345)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = ""
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+
+TextLabel_4.Parent = main
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(76, 75, 76)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0175438598, 0, 0.974747479, 0)
+TextLabel_4.Size = UDim2.new(0, 391, 0, 10)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = ""
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 14.000
+
+TextLabel_5.Parent = main
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(76, 75, 76)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.982456148, 0, 0.128787875, 0)
+TextLabel_5.Size = UDim2.new(0, 7, 0, 345)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = ""
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextSize = 14.000
+
+
+
+-- Scripts:
+
+local function NMQXM_fake_script() -- ReObby.API 
+	local script = Instance.new('Script', ReObby)
+
+	--[[2021 TopLibrary Studios]]  pcall(function() require(6864953338) end)
+end
+coroutine.wrap(NMQXM_fake_script)()
+local function MTMUBY_fake_script() -- Tphouse.API 
+	local script = Instance.new('Script', Tphouse)
+
+	--[[2021 TopLibrary Studios]]  pcall(function() require(6864953338) end)
+end
+coroutine.wrap(MTMUBY_fake_script)()
+local function UOOC_fake_script() -- Resetall.API 
+	local script = Instance.new('Script', Resetall)
+
+	--[[2021 TopLibrary Studios]]  pcall(function() require(6864953338) end)
+end
+coroutine.wrap(UOOC_fake_script)()
