@@ -1,0 +1,36 @@
+------------------------------------------------------------ Commands
+
+Non-premium always loads the music changes loadstring up by default unlike premium which has it as a GUI toggle. This used to be iconic until Roblox removed music. Now it's just used for counting the estimated total amount of non-premium executions.
+Premium has no void on execution.
+Premium has slightly different executor/execution detection
+Premium always loads up a checker/verification loadstring that checks if the script is genuine. It would say "Access Granted" in the Console after execution or "Invalid Access" if else
+Premium has faster loopgrab
+Premium has //error
+Premium has //kickall (broken after a Roblox update but will be fixed soon)
+Premium has //sban which is very very very good. Non-premium only has //skick or //tkick or //jail (semi-ban)
+Premium has permaslock which voids all the spawns along with spawn control commands. It can be combined with the server lock keybind to make it unstoppable.
+Premium has movedb which removes the death barrier.
+Premium has superloopgrab which is currently the fastest loopgrab to ever exist only at the cost of being annoying/unstable lol.
+Premium can disable the autoperm/permify that happens when a user with the gamepass joins your server in the GUI or with the command //disableperm
+Premium has a better bmove (server sided btools? Kinda as they are literally tools this time.)
+
+------------------------------------------------------------ Misc
+
+findresetpad/toregen now automatically goes to coords that the regen is often located at before going to the regen right away
+The //resetspawn command now also removes the void on the premium version unlike non-premium which completely ignores that.
+cframelocatereg is a hidden command that actually functions on premium unlike with non-premium where it just voids the user.
+
+------------------------------------------------------------ GUI
+
+Premium has ClickFard in the GUI which unleashes a fard on the user and kills them. Added for fun nothing serious of course.
+Premium can Hide the regen but it can also delete it. With hide it goes to a coord that it can easily be found again. With delete there's almost no way to find it.
+Same goes for Delete admin pads uses the Ivory to "delete" all pads.
+Premium has an improved Trashserver. Non-premium also has this command but it had always been a literal mess on non-premium. With premium it's a lot more stable but still not something I'm satisfied with personally.
+Premium has a No admin Lagger which can be used to fuck the server up when you have no admin. Finally a way to have power in every single server you join.
+Premium can load infinite yield up in the GUI unlike non-premium which can only use the //infyield command. THis has been done like this as some commands require infinite yield's usage and loading iy through scv2 allows them to work.
+Premium has findregen2 and findregen3, fr2 can find most regen pads however if they're "deleted" it won't be able to. In that case fr3 is an option but eh it's slow but looks everywhere. P.S yeemi made fr3
+
+------------------------------------------------------------ Takeover
+
+This changes the rules of the server as a whole.
+Buy Shortcut v2 Premium to find out.
