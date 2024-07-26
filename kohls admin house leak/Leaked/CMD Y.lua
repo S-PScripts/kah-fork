@@ -1,6 +1,19 @@
+-- Copyright CMD Softworks 2024
+
+
 if game.CoreGui:FindFirstChild("CMD-Y") then
 	return
 end
+
+writefile = writefile or function() end
+readfile = readfile or function() return "" end
+appendfile = appendfile or function() end
+makefolder = makefolder or function() end
+loadfile = loadfile or function() return "" end
+isfile = isfile or function() return false end
+isfolder = isfolder or function() return false end
+delfolder = delfolder or function() end
+delfile = delfile or function() end
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
@@ -2185,8 +2198,6 @@ CMDY.s66226262626.CornerRadius = UDim.new(200, 0)
 CMDY.s66226262626.Name = "s66226262626"
 CMDY.s66226262626.Parent = CMDY.CloseLogs
 
-local ActBar = Instance.new("TextBox", game.CoreGui.CoreScriptLocalization)
-
 local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript 
 	local script = Instance.new('LocalScript', CMDY.CMDY)
 	local Player = game.Players.LocalPlayer
@@ -2635,33 +2646,6 @@ local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript
 	local Mouse = Player:GetMouse()
 	local prefix = SettingsP.Prefix.Text
 	
-	if syn and syn.request then
-		req = syn.request
-	elseif fluxus and fluxus.request then
-		req = fluxus.request
-	elseif http and http.request then
-		req = http.request
-	else
-		req = request or fluxus.request or http_request or http.request or syn.request
-	end
-
-	task.spawn(function()
-		pcall(function()
-			req({
-				Url = 'http://127.0.0.1:6463/rpc?v=1',
-				Method = 'POST',
-				Headers = {
-					['Content-Type'] = 'application/json',
-					Origin = 'https://discord.com'
-				},
-				Body = game.HttpService:JSONEncode({
-					cmd = 'INVITE_BROWSER',
-					nonce = game.HttpService:GenerateGUID(false),
-					args = {code = 'VnWVvAMCBC'}
-				})
-			})
-		end)
-	end)
 	
 	CMDY.SilentLogsBar.CloseLogs.MouseButton1Click:Connect(function()
 		CMDY.SilentLogsBar.Visible = false
@@ -4055,31 +4039,6 @@ local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript
 	end
 
 	
-
-	local outsourceversion = game:HttpGet("https://raw.githubusercontent.com/quivings/cmdy/main/version.txt")
-
-	local Version = 1.56
-
-	if tonumber(outsourceversion) > Version then
-		game.Players.LocalPlayer:Kick("OUTDATED VERSION OF CMD - Y.")
-		task.wait(3)
-		while true do end
-		task.wait(1)
-		game:Shutdown()
-	elseif tonumber(outsourceversion) < Version then
-		game.Players.LocalPlayer:Kick("TAMPERING WITH THE VERSION/GITHUB PAGE HAS AN ERROR")
-		task.wait(3)
-		while true do end
-		task.wait(1)
-		game:Shutdown()
-	elseif not outsourceversion or not Version then
-		game.Players.LocalPlayer:Kick("FAILED TO GET VERSION.")
-		task.wait(3)
-		while true do end
-		task.wait(1)
-		game:Shutdown()
-	end
-
 
 	local function loadbtools()
 		if Player:FindFirstChild("Backpack") and workspace:FindFirstChild(Player.Name) then
@@ -6613,37 +6572,55 @@ local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript
 						doingcmdy = false
 						prompt("Regen not moved by CMD-Y.")
 						prompt("Trying leaked locations..")
-                        local locations = {
-                            CFrame.new(Vector3.new(1000000, 1000000, 1000000)), 
-                            CFrame.new(Vector3.new(1000000, 1000003, -1000000)),
-                            CFrame.new(Vector3.new(1000000, -1000003, -1000000)),
-                            CFrame.new(Vector3.new(1000000, -1000000, -3)),
-                            CFrame.new(Vector3.new(3, -1000000, 1000000)),
-                            CFrame.new(Vector3.new(1000000, -3, -1000000)),
-                            CFrame.new(Vector3.new(-1000000, -3, 1000000)),
-                            CFrame.new(Vector3.new(1000000, 3, 1000000)),
-                            CFrame.new(Vector3.new(1000000, 1000003, 1000000)),
-                            CFrame.new(Vector3.new(1000000, -1000003, 1000000)),
-                            CFrame.new(Vector3.new(454545, 150000, -678678)),
-                            CFrame.new(Vector3.new(306712, 420552, 398158)),
-                            CFrame.new(Vector3.new(-1000000, 1000003, 1000000)),
-                            CFrame.new(Vector3.new(-1000000, 1000003, -1000000)),
-                            CFrame.new(Vector3.new(-1000000, -1000003, -1000000)),
-                            CFrame.new(Vector3.new(45400, -49860, 56673)),
-                            CFrame.new(Vector3.new(56470, -48312, 28578)),
-                            CFrame.new(Vector3.new(75304, -49638, 47300)),
-                            CFrame.new(Vector3.new(34120, -48830, 30233)),
-                            CFrame.new(Vector3.new(34120, -48830, 30233)),
-                            CFrame.new(Vector3.new(77822, -49751, 79116)),
-                            CFrame.new(Vector3.new(42682, -29202, 29886)),
-                            CFrame.new(Vector3.new(51052, -49558, 34068)),
-                            CFrame.new(Vector3.new(-251773, 1000003, 382563)),
-                            CFrame.new(0, 2.5, 0)
-                        }
-						for _,loc in pairs(locations) do
-                            clientloadpos(loc)
-                            task.wait(.5)
-                        end
+						clientloadpos(CFrame.new(Vector3.new(1000000, 1000000, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, 1000003, -1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, -1000003, -1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, -1000000, -3)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(3, -1000000, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, -3, -1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(-1000000, -3, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, 3, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, 1000003, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(1000000, -1000003, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(454545, 150000, -678678)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(306712, 420552, 398158)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(-1000000, 1000003, 1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(-1000000, 1000003, -1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(-1000000, -1000003, -1000000)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(45400, -49860, 56673)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(56470, -48312, 28578)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(75304, -49638, 47300)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(34120, -48830, 30233)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(34120, -48830, 30233)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(77822, -49751, 79116)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(42682, -29202, 29886)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(51052, -49558, 34068)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(Vector3.new(-251773, 1000003, 382563)))
+						task.wait(.5)
+						clientloadpos(CFrame.new(0, 2.5, 0))
 						task.wait(.5)
 						if not Admin:FindFirstChild("Regen") then
 							prompt("Couldn't find the regen pad. Sorry!")
@@ -7013,6 +6990,65 @@ local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript
 
 	addcmd("unrainbowmap", "unrmap", "stops rainbow map", function()
 		rainbowmap = false
+	end)
+
+	addcmd("rail", nil, "rails a person",function(plr)
+		for _,v in pairs(PlayerService:GetChildren()) do
+			local isBypass, st = bypassattemptcheck(v.Name)
+			local name,plrname = string.lower(v.Name), string.lower(plr)
+			if string.sub(name, 1, string.len(plrname)) == plrname then
+				if workspace:FindFirstChild(v.Name) then
+					if isBypass == true then
+						act("ff " .. st)
+						act("god " .. st)
+						act("spin " .. st)
+						for i = 1,300 do
+							act("gear me 0000000000000000000000000000000079446473")
+						end
+						wait(2)
+						if Player:FindFirstChild("Backpack") then
+							for _,t in pairs(Player.Backpack:GetChildren()) do
+									t.Parent = PlayerService.LocalPlayer.Character
+									task.wait(.02)
+									t:WaitForChild("Click"):FireServer(workspace[v.Name].Torso.Position)
+							
+							end
+						end
+						
+						
+						wait(2)
+						act("ungod " .. st)
+						act("unspin " .. st)
+						act("unff " .. st)
+						act("removetools me")
+					else
+						act("ff " .. v.Name)
+						act("god " .. v.Name)
+						act("spin " .. v.Name)
+						for i = 1,300 do
+							act("gear me 0000000000000000000000000000000079446473")
+						end
+						wait(2)
+						if Player:FindFirstChild("Backpack") then
+							for _,t in pairs(Player.Backpack:GetChildren()) do
+								
+									t.Parent = PlayerService.LocalPlayer.Character
+									task.wait(.02)
+									t:WaitForChild("Click"):FireServer(workspace[v.Name].Torso.Position)
+								
+							end
+						end
+						
+						
+						wait(2)
+						act("ungod " .. v.Name)
+						act("unspin " .. v.Name)
+						act("unff " .. v.Name)
+						act("removetools me")
+					end
+				end
+			end
+		end
 	end)
 
 	addcmd("regen", "reg", "regenerates pads",function()
@@ -7963,6 +7999,41 @@ local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript
 		act("respawn me")
 	end)
 
+	addcmd("nuke", nil, "nukes someone", function(plr)
+		local fullCircle = 2 * math.pi
+		local radius = 10
+		local function getXAndZPositions(angle)
+			local x = math.cos(angle) * radius
+			local z = math.sin(angle) * radius
+			return x, z
+		end
+		for _,v in pairs(PlayerService:GetPlayers()) do
+			local name,plrname = string.lower(v.Name), string.lower(plr)
+			if string.sub(name, 1, string.len(plrname)) == plrname then
+				if workspace:FindFirstChild(Player.Name) and workspace:FindFirstChild(Player.Name):FindFirstChild("HumanoidRootPart") then
+					if workspace:FindFirstChild(v.Name) and workspace:FindFirstChild(v.Name):FindFirstChild("HumanoidRootPart") then
+						for i = 1,100 do
+							act("gear me 0000000000000000000088885539")
+						end
+						
+						wait(1)
+						for i,c in pairs(Player.Backpack:GetChildren()) do
+							if c.Name == "Tactical Airstrike" then
+								local angle = i * (fullCircle / 50)
+								local x, z = getXAndZPositions(angle)
+								c.Parent = Player.Character
+								c:WaitForChild("OnMouseClick"):FireServer((workspace[v.Name].HumanoidRootPart.CFrame * CFrame.new(x, 0, z)).p)
+							end
+						end
+						wait(10)
+						act("removetools me")
+						
+					end
+				end
+			end
+		end
+	end)
+
 	addcmd("pmsg", "permmsg", "sets a perm message at the top until 'unset' is run", function(msg)
 		pmsg = true
 		task.spawn(function()
@@ -7976,6 +8047,40 @@ local function ZCFUV_fake_script() -- CMDY.CMDY.LocalScript
 
 	addcmd("unset", "unpmsg", "unsets the perm message", function()
 		pmsg = false
+	end)
+
+	addcmd("surround", nil, "surrounds someone with planes", function(plr)
+		local fullCircle = 2 * math.pi
+		local radius = 10 
+		local function getXAndZPositions(angle)
+			local x = math.cos(angle) * radius
+			local z = math.sin(angle) * radius
+			return x, z
+		end
+		for _,v in pairs(PlayerService:GetPlayers()) do
+			local name,plrname = string.lower(v.Name), string.lower(plr)
+			if string.sub(name, 1, string.len(plrname)) == plrname then
+				if workspace:FindFirstChild(Player.Name) and workspace:FindFirstChild(Player.Name):FindFirstChild("HumanoidRootPart") then
+					if workspace:FindFirstChild(v.Name) and workspace:FindFirstChild(v.Name):FindFirstChild("HumanoidRootPart") then
+						for i = 1,100 do
+							act("gear me 0000000000000000000088885539")
+						end
+						
+						wait(1)
+						for i,c in pairs(Player.Backpack:GetChildren()) do
+							if c.Name == "Tactical Airstrike" then
+								local angle = i * (fullCircle / 50)
+								local x, z = getXAndZPositions(angle)
+								c.Parent = Player.Character
+								c:WaitForChild("OnMouseClick"):FireServer((workspace[v.Name].HumanoidRootPart.CFrame * CFrame.new(x, 0, z)).p)
+							end
+						end
+						wait(1)
+						act("removetools me")
+					end
+				end
+			end
+		end
 	end)
 
 	addcmd("fixcam", "fixc", "fixes your camera", function()
