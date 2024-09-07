@@ -1,0 +1,73 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local UIToolsGradient = Instance.new("UIGradient")
+local Pattern = Instance.new("ImageLabel")
+local TextBox = Instance.new("TextBox")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.707509875, 0, 0.644675076, 0)
+Frame.Size = UDim2.new(0, 287, 0, 45)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageTransparency = 0.650
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+UIToolsGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(29, 29, 29)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(47, 47, 47))}
+UIToolsGradient.Name = "UIToolsGradient"
+UIToolsGradient.Parent = Frame
+
+Pattern.Name = "Pattern"
+Pattern.Parent = Frame
+Pattern.AnchorPoint = Vector2.new(0.5, 0)
+Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern.BackgroundTransparency = 1.000
+Pattern.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pattern.BorderSizePixel = 0
+Pattern.Position = UDim2.new(0.359111518, 0, -5.5999999, 0)
+Pattern.Size = UDim2.new(1, 0, 0.400000006, 0)
+Pattern.Image = "rbxassetid://14841319882"
+Pattern.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Pattern.ImageTransparency = 0.250
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0209059231, 0, 0.333333343, 0)
+TextBox.Size = UDim2.new(0, 281, 0, 17)
+TextBox.Font = Enum.Font.FredokaOne
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+-- Scripts:
+
+local function AQRMEBZ_fake_script() -- TextBox.Script 
+	local script = Instance.new('Script', TextBox)
+
+	script.Parent.FocusLost:connect(function(EnterPressed)
+		if EnterPressed then
+			local message = script.Parent.Text
+			game.Players:Chat(message)
+		end
+		end)
+end
+coroutine.wrap(AQRMEBZ_fake_script)()
