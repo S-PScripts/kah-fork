@@ -1,4 +1,6 @@
-fork of damix's repo
-i reorganised some stuff
+# kah-fork
+this is a fork of damix's kah script archive/bin. i reorganised some stuff
 
-cool, this is now a backup :D
+this is now a backup since his account got deleted
+
+NOTE: none of these scripts work anymore due to roblox's chat update (they're ass anyways). 
